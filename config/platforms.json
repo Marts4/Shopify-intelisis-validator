@@ -1,0 +1,65 @@
+{
+  "platforms": [
+    {
+      "name": "ROOMI",
+      "enabled": true,
+      "shop": "roomi-mexico.myshopify.com",
+      "branch_id": 442,
+      "api_version": "2024-07",
+      "admin_shop_name": "roomi-mexico"
+    },
+    {
+      "name": "SPRING",
+      "enabled": true,
+      "shop": "spring-air-mx.myshopify.com",
+      "branch_id": 389,
+      "api_version": "2024-07",
+      "admin_shop_name": "spring-air-mx"
+    },
+    {
+      "name": "ATLAS",
+      "enabled": true,
+      "shop": "colchones-atlas.myshopify.com",
+      "branch_id": 98,
+      "api_version": "2024-07",
+      "admin_shop_name": "colchones-atlas"
+    }
+  ],
+  "intelisis": {
+    "base_url": "https://gca.gruvant.com/api/reports/atlasbiventaspordia",
+    "page_limit": 10000,
+    "valid_movements": ["Pedido"],
+    "filter_positive_totals": true
+  },
+  "validation": {
+    "financial_status": "paid",
+    "order_status": "any",
+    "tolerance_amount": 1.0
+  },
+  "execution": {
+    "date_mode": "manual",
+    "manual_date": "2025-11-21",
+    "timezone": "America/Mexico_City"
+  },
+  "reports": {
+    "excel": {
+      "enabled": true,
+      "output_path": "output/consulta_validacion.xlsx"
+    },
+    "email": {
+      "enabled": true,
+      "smtp_server": "smtp.gmail.com",
+      "smtp_port": 465,
+      "sender": "gca.corporativo1@gmail.com",
+      "recipients": [
+        "analistajr@gcatlas.mx"
+      ]
+    }
+  },
+  "logging": {
+    "level": "INFO",
+    "log_dir": "logs",
+    "rotation": "daily",
+    "retention_days": 30
+  }
+}

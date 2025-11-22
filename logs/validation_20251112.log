@@ -1,0 +1,707 @@
+2025-11-12 11:00:15 | INFO     | -        | SYSTEM          | ======================================================================
+2025-11-12 11:00:15 | INFO     | -        | SYSTEM          | Sistema de Validación Shopify-Intelisis iniciado
+2025-11-12 11:00:15 | INFO     | -        | SYSTEM          | Nivel de logging: INFO
+2025-11-12 11:00:15 | INFO     | -        | SYSTEM          | Directorio de logs: C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\logs
+2025-11-12 11:00:15 | INFO     | -        | SYSTEM          | Plataformas habilitadas: 2
+2025-11-12 11:00:15 | INFO     | -        | SYSTEM          |   - ROOMI (Branch: 442)
+2025-11-12 11:00:15 | INFO     | -        | SYSTEM          |   - SPRING (Branch: 389)
+2025-11-12 11:00:15 | INFO     | -        | SYSTEM          | ======================================================================
+2025-11-12 11:00:20 | INFO     | -        | MAIN            | ======================================================================
+2025-11-12 11:00:20 | INFO     | -        | MAIN            | SISTEMA DE VALIDACIÓN SHOPIFY-INTELISIS v2.0
+2025-11-12 11:00:20 | INFO     | -        | MAIN            | ======================================================================
+2025-11-12 11:00:20 | ERROR    | ROOMI    | ORDER_FETCHER   | Error inicializando cliente ROOMI: Can't instantiate abstract class ShopifyClient without an implementation for abstract method 'fetch_data'
+Traceback (most recent call last):
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\services\order_fetcher.py", line 30, in _initialize_clients
+    client = ShopifyClient(platform_config)
+TypeError: Can't instantiate abstract class ShopifyClient without an implementation for abstract method 'fetch_data'
+2025-11-12 11:00:20 | CRITICAL | -        | MAIN            | Error crítico en el proceso principal: Can't instantiate abstract class ShopifyClient without an implementation for abstract method 'fetch_data'
+Traceback (most recent call last):
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\main.py", line 30, in main
+    orchestrator = OrchestratorService()
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\services\orchestrator.py", line 22, in __init__
+    self.order_fetcher = OrderFetcherService()
+                         ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\services\order_fetcher.py", line 24, in __init__
+    self._initialize_clients()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\services\order_fetcher.py", line 30, in _initialize_clients
+    client = ShopifyClient(platform_config)
+TypeError: Can't instantiate abstract class ShopifyClient without an implementation for abstract method 'fetch_data'
+2025-11-12 11:00:20 | INFO     | -        | MAIN            | ======================================================================
+2025-11-12 11:00:20 | INFO     | -        | MAIN            | ❌ PROCESO FINALIZADO CON ERRORES
+2025-11-12 11:00:20 | INFO     | -        | MAIN            | ======================================================================
+2025-11-12 12:29:30 | INFO     | -        | SYSTEM          | ======================================================================
+2025-11-12 12:29:30 | INFO     | -        | SYSTEM          | Sistema de Validación Shopify-Intelisis iniciado
+2025-11-12 12:29:30 | INFO     | -        | SYSTEM          | Nivel de logging: INFO
+2025-11-12 12:29:30 | INFO     | -        | SYSTEM          | Directorio de logs: C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\logs
+2025-11-12 12:29:30 | INFO     | -        | SYSTEM          | Plataformas habilitadas: 2
+2025-11-12 12:29:30 | INFO     | -        | SYSTEM          |   - ROOMI (Branch: 442)
+2025-11-12 12:29:30 | INFO     | -        | SYSTEM          |   - SPRING (Branch: 389)
+2025-11-12 12:29:30 | INFO     | -        | SYSTEM          | ======================================================================
+2025-11-12 12:29:34 | INFO     | -        | MAIN            | ======================================================================
+2025-11-12 12:29:34 | INFO     | -        | MAIN            | SISTEMA DE VALIDACIÓN SHOPIFY-INTELISIS v2.0
+2025-11-12 12:29:34 | INFO     | -        | MAIN            | ======================================================================
+2025-11-12 12:29:34 | INFO     | ROOMI    | ORDER_FETCHER   | Cliente inicializado para ROOMI
+2025-11-12 12:29:34 | INFO     | SPRING   | ORDER_FETCHER   | Cliente inicializado para SPRING
+2025-11-12 12:29:34 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-12 12:29:34 | INFO     | -        | ORCHESTRATOR    |   INICIO DE VALIDACIÓN SHOPIFY-INTELISIS
+2025-11-12 12:29:34 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-12 12:29:34 | INFO     | -        | ORCHESTRATOR    | Timestamp: 2025-11-12 12:29:34
+2025-11-12 12:29:34 | INFO     | -        | ORCHESTRATOR    | Modo: MANUAL
+2025-11-12 12:29:34 | INFO     | -        | ORCHESTRATOR    | Plataformas habilitadas: 2
+2025-11-12 12:29:34 | INFO     | -        | ORCHESTRATOR    | Estado financiero: paid
+2025-11-12 12:29:34 | INFO     | -        | ORCHESTRATOR    | Tolerancia en totales: $1.0
+2025-11-12 12:29:34 | INFO     | -        | ORCHESTRATOR    | Plataformas:
+2025-11-12 12:29:34 | INFO     | ROOMI    | ORCHESTRATOR    |   - ROOMI (Sucursal: 442)
+2025-11-12 12:29:34 | INFO     | SPRING   | ORCHESTRATOR    |   - SPRING (Sucursal: 389)
+2025-11-12 12:29:34 | INFO     | -        | DATE_UTILS      | Modo MANUAL: 2025-11-01
+2025-11-12 12:29:34 | INFO     | -        | ORCHESTRATOR    | Fechas objetivo: 2025-11-01
+2025-11-12 12:29:34 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-12 12:29:34 | INFO     | -        | ORCHESTRATOR    |   PASO 1: OBTENIENDO ÓRDENES DE SHOPIFY
+2025-11-12 12:29:34 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-12 12:29:34 | INFO     | -        | ORDER_FETCHER   | ======================================================================
+2025-11-12 12:29:34 | INFO     | -        | ORDER_FETCHER   |   OBTENIENDO ÓRDENES DE SHOPIFY
+2025-11-12 12:29:34 | INFO     | -        | ORDER_FETCHER   | ======================================================================
+2025-11-12 12:29:34 | INFO     | -        | ORDER_FETCHER   | Fechas a consultar: 2025-11-01
+2025-11-12 12:29:34 | INFO     | -        | ORDER_FETCHER   | Estado financiero: paid
+2025-11-12 12:29:34 | INFO     | -        | ORDER_FETCHER   | Plataformas: 2
+2025-11-12 12:29:34 | INFO     | -        | ORDER_FETCHER   | ----------------------------------------------------------------------
+2025-11-12 12:29:34 | INFO     | -        | ORDER_FETCHER   |   Consultando fecha: 2025-11-01
+2025-11-12 12:29:34 | INFO     | -        | ORDER_FETCHER   | ----------------------------------------------------------------------
+2025-11-12 12:29:34 | INFO     | ROOMI    | ORDER_FETCHER   | Consultando ROOMI...
+2025-11-12 12:29:34 | INFO     | ROOMI    | SHOPIFY         | Consultando órdenes del 2025-11-01
+2025-11-12 12:29:34 | INFO     | ROOMI    | SHOPIFY         | Total obtenido: 0 órdenes
+2025-11-12 12:29:34 | INFO     | -        | TIMING          | Completado: Shopify: Fetch Orders (⏱️ 0.48s)
+2025-11-12 12:29:34 | INFO     | ROOMI    | ORDER_FETCHER   | ✓ ROOMI: 0 órdenes obtenidas
+2025-11-12 12:29:34 | INFO     | SPRING   | ORDER_FETCHER   | Consultando SPRING...
+2025-11-12 12:29:34 | INFO     | SPRING   | SHOPIFY         | Consultando órdenes del 2025-11-01
+2025-11-12 12:29:35 | INFO     | SPRING   | SHOPIFY         | Página 1: 18 órdenes obtenidas
+2025-11-12 12:29:35 | INFO     | SPRING   | SHOPIFY         | Total obtenido: 18 órdenes
+2025-11-12 12:29:35 | INFO     | -        | TIMING          | Completado: Shopify: Fetch Orders (⏱️ 1.04s)
+2025-11-12 12:29:35 | INFO     | SPRING   | ORDER_FETCHER   | ✓ SPRING: 18 órdenes obtenidas
+2025-11-12 12:29:35 | INFO     | -        | ORDER_FETCHER   | ----------------------------------------------------------------------
+2025-11-12 12:29:35 | INFO     | -        | ORDER_FETCHER   |   Resumen de Órdenes Obtenidas
+2025-11-12 12:29:35 | INFO     | -        | ORDER_FETCHER   | ----------------------------------------------------------------------
+2025-11-12 12:29:35 | INFO     | SPRING   | ORDER_FETCHER   |   SPRING: 18 órdenes
+2025-11-12 12:29:35 | INFO     | -        | ORDER_FETCHER   |   TOTAL: 18 órdenes
+2025-11-12 12:29:35 | INFO     | -        | TIMING          | Completado: Fetch All Orders (⏱️ 1.53s)
+2025-11-12 12:29:35 | INFO     | -        | ORCHESTRATOR    | ✓ Total órdenes obtenidas: 18
+2025-11-12 12:29:36 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-12 12:29:36 | INFO     | -        | ORCHESTRATOR    |   PASO 2: VALIDANDO CONTRA INTELISIS
+2025-11-12 12:29:36 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-12 12:29:36 | INFO     | -        | VALIDATOR       | ======================================================================
+2025-11-12 12:29:36 | INFO     | -        | VALIDATOR       |   VALIDANDO ÓRDENES CONTRA INTELISIS
+2025-11-12 12:29:36 | INFO     | -        | VALIDATOR       | ======================================================================
+2025-11-12 12:29:36 | INFO     | -        | VALIDATOR       | Consultando Intelisis para: 2025-11-01
+2025-11-12 12:29:36 | INFO     | -        | INTELISIS       | Consultando Intelisis para el día: 2025-11-01
+2025-11-12 12:29:36 | INFO     | -        | INTELISIS       | Filtrando por sucursales: [389]
+2025-11-12 12:29:43 | INFO     | -        | INTELISIS       | Página 0: 36/1597 registros válidos
+2025-11-12 12:29:43 | INFO     | -        | INTELISIS       | Total registros obtenidos: 36
+2025-11-12 12:29:43 | INFO     | -        | INTELISIS       | ----------------------------------------------------------------------
+2025-11-12 12:29:43 | INFO     | -        | INTELISIS       |   Distribución por Sucursal
+2025-11-12 12:29:43 | INFO     | -        | INTELISIS       | ----------------------------------------------------------------------
+2025-11-12 12:29:43 | INFO     | -        | INTELISIS       |   Sucursal 389 (SPRING): 36 registros
+2025-11-12 12:29:43 | INFO     | -        | TIMING          | Completado: Intelisis: Fetch Data (⏱️ 7.69s)
+2025-11-12 12:29:43 | INFO     | -        | VALIDATOR       | Índice creado: 17 órdenes únicas en Intelisis
+2025-11-12 12:29:43 | WARNING  | SPRING   | VALIDATION      | Order 6943181242477: ⚠ No encontrado en Intelisis
+2025-11-12 12:29:43 | WARNING  | SPRING   | VALIDATION      | Order 6942882824301: ⚠ Diferencias detectadas
+2025-11-12 12:29:43 | INFO     | -        | VALIDATOR       | ----------------------------------------------------------------------
+2025-11-12 12:29:43 | INFO     | -        | VALIDATOR       |   Buscando 1 órdenes no encontradas en día siguiente
+2025-11-12 12:29:43 | INFO     | -        | VALIDATOR       | ----------------------------------------------------------------------
+2025-11-12 12:29:43 | INFO     | -        | VALIDATOR       | Consultando: 2025-11-02
+2025-11-12 12:29:43 | INFO     | -        | INTELISIS       | Consultando Intelisis para el día: 2025-11-02
+2025-11-12 12:29:43 | INFO     | -        | INTELISIS       | Filtrando por sucursales: [389]
+2025-11-12 12:30:13 | ERROR    | -        | INTELISIS       | Request failed: HTTPSConnectionPool(host='gca.gruvant.com', port=443): Read timed out. (read timeout=30)
+Traceback (most recent call last):
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\urllib3\connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\urllib3\connection.py", line 565, in getresponse
+    httplib_response = super().getresponse()
+  File "C:\Users\GcatlasIT\AppData\Local\Programs\Python\Python313\Lib\http\client.py", line 1430, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\GcatlasIT\AppData\Local\Programs\Python\Python313\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\GcatlasIT\AppData\Local\Programs\Python\Python313\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\GcatlasIT\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 719, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\GcatlasIT\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 1304, in recv_into
+    return self.read(nbytes, buffer)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\GcatlasIT\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 1138, in read
+    return self._sslobj.read(len, buffer)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+TimeoutError: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\urllib3\util\retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\urllib3\util\util.py", line 39, in reraise
+    raise value
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\urllib3\connectionpool.py", line 536, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\urllib3\connectionpool.py", line 367, in _raise_timeout
+    raise ReadTimeoutError(
+        self, url, f"Read timed out. (read timeout={timeout_value})"
+    ) from err
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='gca.gruvant.com', port=443): Read timed out. (read timeout=30)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\integrations\base_client.py", line 49, in _make_request
+    response = requests.request(method, url, **kwargs)
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\requests\adapters.py", line 713, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='gca.gruvant.com', port=443): Read timed out. (read timeout=30)
+2025-11-12 12:30:14 | ERROR    | -        | INTELISIS       | Error obteniendo página 0: Failed to connect to INTELISIS: HTTPSConnectionPool(host='gca.gruvant.com', port=443): Read timed out. (read timeout=30)
+Traceback (most recent call last):
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\urllib3\connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\urllib3\connection.py", line 565, in getresponse
+    httplib_response = super().getresponse()
+  File "C:\Users\GcatlasIT\AppData\Local\Programs\Python\Python313\Lib\http\client.py", line 1430, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\GcatlasIT\AppData\Local\Programs\Python\Python313\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\GcatlasIT\AppData\Local\Programs\Python\Python313\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\GcatlasIT\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 719, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\GcatlasIT\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 1304, in recv_into
+    return self.read(nbytes, buffer)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\GcatlasIT\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 1138, in read
+    return self._sslobj.read(len, buffer)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+TimeoutError: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\urllib3\util\retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\urllib3\util\util.py", line 39, in reraise
+    raise value
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\urllib3\connectionpool.py", line 536, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\urllib3\connectionpool.py", line 367, in _raise_timeout
+    raise ReadTimeoutError(
+        self, url, f"Read timed out. (read timeout={timeout_value})"
+    ) from err
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='gca.gruvant.com', port=443): Read timed out. (read timeout=30)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\integrations\base_client.py", line 49, in _make_request
+    response = requests.request(method, url, **kwargs)
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\requests\adapters.py", line 713, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='gca.gruvant.com', port=443): Read timed out. (read timeout=30)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\integrations\intelisis_client.py", line 104, in _fetch_page
+    response = self._make_request(
+        method='GET',
+    ...<2 lines>...
+        timeout=30
+    )
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\utils\decorators.py", line 38, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\integrations\base_client.py", line 61, in _make_request
+    raise IntegrationError(f"Failed to connect to {self.name}: {str(e)}")
+src.core.exceptions.IntegrationError: Failed to connect to INTELISIS: HTTPSConnectionPool(host='gca.gruvant.com', port=443): Read timed out. (read timeout=30)
+2025-11-12 12:30:14 | ERROR    | -        | TIMING          | Falló: Intelisis: Fetch Data después de 30.53s
+Traceback (most recent call last):
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\urllib3\connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\urllib3\connection.py", line 565, in getresponse
+    httplib_response = super().getresponse()
+  File "C:\Users\GcatlasIT\AppData\Local\Programs\Python\Python313\Lib\http\client.py", line 1430, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\GcatlasIT\AppData\Local\Programs\Python\Python313\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\GcatlasIT\AppData\Local\Programs\Python\Python313\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\GcatlasIT\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 719, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\GcatlasIT\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 1304, in recv_into
+    return self.read(nbytes, buffer)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\GcatlasIT\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 1138, in read
+    return self._sslobj.read(len, buffer)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+TimeoutError: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\urllib3\util\retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\urllib3\util\util.py", line 39, in reraise
+    raise value
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\urllib3\connectionpool.py", line 536, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\urllib3\connectionpool.py", line 367, in _raise_timeout
+    raise ReadTimeoutError(
+        self, url, f"Read timed out. (read timeout={timeout_value})"
+    ) from err
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='gca.gruvant.com', port=443): Read timed out. (read timeout=30)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\integrations\base_client.py", line 49, in _make_request
+    response = requests.request(method, url, **kwargs)
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\requests\adapters.py", line 713, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='gca.gruvant.com', port=443): Read timed out. (read timeout=30)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\integrations\intelisis_client.py", line 104, in _fetch_page
+    response = self._make_request(
+        method='GET',
+    ...<2 lines>...
+        timeout=30
+    )
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\utils\decorators.py", line 38, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\integrations\base_client.py", line 61, in _make_request
+    raise IntegrationError(f"Failed to connect to {self.name}: {str(e)}")
+src.core.exceptions.IntegrationError: Failed to connect to INTELISIS: HTTPSConnectionPool(host='gca.gruvant.com', port=443): Read timed out. (read timeout=30)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\utils\decorators.py", line 85, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\integrations\intelisis_client.py", line 59, in fetch_data
+    page_records = self._fetch_page(date, page)
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\integrations\intelisis_client.py", line 138, in _fetch_page
+    raise IntelisisAPIError(
+    ...<2 lines>...
+    )
+src.core.exceptions.IntelisisAPIError: Intelisis API Error - Status 0: Failed to connect to INTELISIS: HTTPSConnectionPool(host='gca.gruvant.com', port=443): Read timed out. (read timeout=30)
+2025-11-12 12:30:14 | ERROR    | -        | VALIDATOR       | Error consultando día siguiente: Intelisis API Error - Status 0: Failed to connect to INTELISIS: HTTPSConnectionPool(host='gca.gruvant.com', port=443): Read timed out. (read timeout=30)
+Traceback (most recent call last):
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\urllib3\connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\urllib3\connection.py", line 565, in getresponse
+    httplib_response = super().getresponse()
+  File "C:\Users\GcatlasIT\AppData\Local\Programs\Python\Python313\Lib\http\client.py", line 1430, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\GcatlasIT\AppData\Local\Programs\Python\Python313\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\GcatlasIT\AppData\Local\Programs\Python\Python313\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\GcatlasIT\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 719, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\GcatlasIT\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 1304, in recv_into
+    return self.read(nbytes, buffer)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\GcatlasIT\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 1138, in read
+    return self._sslobj.read(len, buffer)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+TimeoutError: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\urllib3\util\retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\urllib3\util\util.py", line 39, in reraise
+    raise value
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\urllib3\connectionpool.py", line 536, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\urllib3\connectionpool.py", line 367, in _raise_timeout
+    raise ReadTimeoutError(
+        self, url, f"Read timed out. (read timeout={timeout_value})"
+    ) from err
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='gca.gruvant.com', port=443): Read timed out. (read timeout=30)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\integrations\base_client.py", line 49, in _make_request
+    response = requests.request(method, url, **kwargs)
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\.venv\Lib\site-packages\requests\adapters.py", line 713, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='gca.gruvant.com', port=443): Read timed out. (read timeout=30)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\integrations\intelisis_client.py", line 104, in _fetch_page
+    response = self._make_request(
+        method='GET',
+    ...<2 lines>...
+        timeout=30
+    )
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\utils\decorators.py", line 38, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\integrations\base_client.py", line 61, in _make_request
+    raise IntegrationError(f"Failed to connect to {self.name}: {str(e)}")
+src.core.exceptions.IntegrationError: Failed to connect to INTELISIS: HTTPSConnectionPool(host='gca.gruvant.com', port=443): Read timed out. (read timeout=30)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\services\validator.py", line 334, in _check_next_day_for_missing
+    next_day_data = self.intelisis_client.fetch_data(next_date, branch_ids)
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\utils\decorators.py", line 85, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\integrations\intelisis_client.py", line 59, in fetch_data
+    page_records = self._fetch_page(date, page)
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\integrations\intelisis_client.py", line 138, in _fetch_page
+    raise IntelisisAPIError(
+    ...<2 lines>...
+    )
+src.core.exceptions.IntelisisAPIError: Intelisis API Error - Status 0: Failed to connect to INTELISIS: HTTPSConnectionPool(host='gca.gruvant.com', port=443): Read timed out. (read timeout=30)
+2025-11-12 12:30:14 | INFO     | -        | VALIDATOR       | ----------------------------------------------------------------------
+2025-11-12 12:30:14 | INFO     | -        | VALIDATOR       |   Resumen de Validación
+2025-11-12 12:30:14 | INFO     | -        | VALIDATOR       | ----------------------------------------------------------------------
+2025-11-12 12:30:14 | INFO     | -        | VALIDATOR       | Total órdenes: 18
+✅ OK: 16
+⚠️ Con diferencias: 1
+❌ No encontrados: 1
+📅 Encontrados día siguiente: 0
+Tasa de éxito: 88.9%
+
+Por plataforma:
+  SPRING: 18 total (16 OK, 1 dif, 1 no encontrados)
+2025-11-12 12:30:14 | INFO     | -        | TIMING          | Completado: Validate All Orders (⏱️ 38.28s)
+2025-11-12 12:30:14 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-12 12:30:14 | INFO     | -        | ORCHESTRATOR    |   PROCESO COMPLETADO
+2025-11-12 12:30:14 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-12 12:30:14 | INFO     | -        | ORCHESTRATOR    | Total órdenes procesadas: 18
+2025-11-12 12:30:14 | INFO     | -        | ORCHESTRATOR    | ✅ Validaciones OK: 16
+2025-11-12 12:30:14 | INFO     | -        | ORCHESTRATOR    | ⚠️  Con diferencias: 1
+2025-11-12 12:30:14 | INFO     | -        | ORCHESTRATOR    | ❌ No encontradas: 1
+2025-11-12 12:30:14 | INFO     | -        | ORCHESTRATOR    | Tasa de éxito: 88.9%
+2025-11-12 12:30:14 | INFO     | -        | ORCHESTRATOR    | ----------------------------------------------------------------------
+2025-11-12 12:30:14 | INFO     | -        | ORCHESTRATOR    |   Detalle por Plataforma
+2025-11-12 12:30:14 | INFO     | -        | ORCHESTRATOR    | ----------------------------------------------------------------------
+2025-11-12 12:30:14 | INFO     | SPRING   | ORCHESTRATOR    | SPRING: 16/18 OK (1 dif, 1 no encontrados)
+2025-11-12 12:30:14 | INFO     | -        | TIMING          | Completado: Complete Validation Process (⏱️ 39.82s)
+2025-11-12 12:30:14 | INFO     | -        | MAIN            | ======================================================================
+2025-11-12 12:30:14 | INFO     | -        | MAIN            |   PASO 3: GENERANDO REPORTES
+2025-11-12 12:30:14 | INFO     | -        | MAIN            | ======================================================================
+2025-11-12 12:30:14 | INFO     | -        | EXCEL_REPORTER  | Iniciando generación de reporte: EXCEL_REPORTER
+2025-11-12 12:30:14 | INFO     | -        | EXCEL_REPORTER  | Creando archivo Excel: C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\output\consulta_validacion.xlsx
+2025-11-12 12:30:14 | INFO     | -        | EXCEL_REPORTER  | Total registros: 18
+2025-11-12 12:30:14 | INFO     | -        | EXCEL_REPORTER  | ✓ Archivo guardado: C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\output\consulta_validacion.xlsx
+2025-11-12 12:30:14 | INFO     | -        | EXCEL_REPORTER  | Tamaño del archivo: 7,574 bytes
+2025-11-12 12:30:14 | INFO     | -        | EXCEL_REPORTER  | ✓ Reporte generado exitosamente: EXCEL_REPORTER
+2025-11-12 12:30:14 | INFO     | -        | MAIN            | ✓ Excel guardado en: C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\output\consulta_validacion.xlsx
+2025-11-12 12:30:14 | INFO     | -        | EMAIL_REPORTER  | Iniciando generación de reporte: EMAIL_REPORTER
+2025-11-12 12:30:14 | INFO     | -        | EMAIL_REPORTER  | Preparando email para: analistajr@gcatlas.mx
+2025-11-12 12:30:14 | INFO     | -        | EMAIL_REPORTER  | Conectando al servidor SMTP...
+2025-11-12 12:30:15 | INFO     | -        | EMAIL_REPORTER  | Enviando email a: analistajr@gcatlas.mx
+2025-11-12 12:30:17 | INFO     | -        | EMAIL_REPORTER  | ✓ Email enviado exitosamente
+2025-11-12 12:30:17 | INFO     | -        | EMAIL_REPORTER  | ✓ Reporte generado exitosamente: EMAIL_REPORTER
+2025-11-12 12:30:17 | INFO     | -        | MAIN            | ✓ Email enviado a: analistajr@gcatlas.mx
+2025-11-12 12:30:17 | INFO     | -        | MAIN            | ======================================================================
+2025-11-12 12:30:17 | INFO     | -        | MAIN            |   RESUMEN FINAL
+2025-11-12 12:30:17 | INFO     | -        | MAIN            | ======================================================================
+2025-11-12 12:30:17 | INFO     | -        | MAIN            | 📅 Fecha(s): 2025-11-01
+2025-11-12 12:30:17 | INFO     | -        | MAIN            | 📊 Total órdenes: 18
+2025-11-12 12:30:17 | INFO     | -        | MAIN            | ✅ Validaciones OK: 16
+2025-11-12 12:30:17 | INFO     | -        | MAIN            | ⚠️  Con diferencias: 1
+2025-11-12 12:30:17 | INFO     | -        | MAIN            | ❌ No encontradas: 1
+2025-11-12 12:30:17 | INFO     | -        | MAIN            | 📈 Tasa de éxito: 88.9%
+2025-11-12 12:30:17 | INFO     | -        | MAIN            | 
+2025-11-12 12:30:17 | INFO     | -        | MAIN            | Por plataforma:
+2025-11-12 12:30:17 | INFO     | -        | MAIN            |   SPRING: 16/18 OK (1 dif, 1 no encontrados)
+2025-11-12 12:30:17 | INFO     | -        | MAIN            | 
+2025-11-12 12:30:17 | INFO     | -        | MAIN            | ======================================================================
+2025-11-12 12:30:17 | INFO     | -        | MAIN            | ✅ PROCESO COMPLETADO EXITOSAMENTE
+2025-11-12 12:30:17 | INFO     | -        | MAIN            | ======================================================================
+2025-11-12 17:53:18 | INFO     | -        | SYSTEM          | ======================================================================
+2025-11-12 17:53:18 | INFO     | -        | SYSTEM          | Sistema de Validación Shopify-Intelisis iniciado
+2025-11-12 17:53:18 | INFO     | -        | SYSTEM          | Nivel de logging: INFO
+2025-11-12 17:53:18 | INFO     | -        | SYSTEM          | Directorio de logs: C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\logs
+2025-11-12 17:53:18 | INFO     | -        | SYSTEM          | Plataformas habilitadas: 3
+2025-11-12 17:53:18 | INFO     | -        | SYSTEM          |   - ROOMI (Branch: 442)
+2025-11-12 17:53:18 | INFO     | -        | SYSTEM          |   - SPRING (Branch: 389)
+2025-11-12 17:53:18 | INFO     | -        | SYSTEM          |   - ROOMI_ATLAS (Branch: 98)
+2025-11-12 17:53:18 | INFO     | -        | SYSTEM          | ======================================================================
+2025-11-12 17:53:20 | INFO     | -        | MAIN            | ======================================================================
+2025-11-12 17:53:20 | INFO     | -        | MAIN            | SISTEMA DE VALIDACIÓN SHOPIFY-INTELISIS v2.0
+2025-11-12 17:53:20 | INFO     | -        | MAIN            | ======================================================================
+2025-11-12 17:53:20 | INFO     | ROOMI    | ORDER_FETCHER   | Cliente inicializado para ROOMI
+2025-11-12 17:53:20 | INFO     | SPRING   | ORDER_FETCHER   | Cliente inicializado para SPRING
+2025-11-12 17:53:20 | INFO     | ROOMI_ATLAS | ORDER_FETCHER   | Cliente inicializado para ROOMI_ATLAS
+2025-11-12 17:53:20 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-12 17:53:20 | INFO     | -        | ORCHESTRATOR    |   INICIO DE VALIDACIÓN SHOPIFY-INTELISIS
+2025-11-12 17:53:20 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-12 17:53:20 | INFO     | -        | ORCHESTRATOR    | Timestamp: 2025-11-12 17:53:20
+2025-11-12 17:53:20 | INFO     | -        | ORCHESTRATOR    | Modo: MANUAL
+2025-11-12 17:53:20 | INFO     | -        | ORCHESTRATOR    | Plataformas habilitadas: 3
+2025-11-12 17:53:20 | INFO     | -        | ORCHESTRATOR    | Estado financiero: paid
+2025-11-12 17:53:20 | INFO     | -        | ORCHESTRATOR    | Tolerancia en totales: $1.0
+2025-11-12 17:53:20 | INFO     | -        | ORCHESTRATOR    | Plataformas:
+2025-11-12 17:53:20 | INFO     | ROOMI    | ORCHESTRATOR    |   - ROOMI (Sucursal: 442)
+2025-11-12 17:53:20 | INFO     | SPRING   | ORCHESTRATOR    |   - SPRING (Sucursal: 389)
+2025-11-12 17:53:20 | INFO     | ROOMI_ATLAS | ORCHESTRATOR    |   - ROOMI_ATLAS (Sucursal: 98)
+2025-11-12 17:53:20 | INFO     | -        | DATE_UTILS      | Modo MANUAL: 2025-11-01
+2025-11-12 17:53:20 | INFO     | -        | ORCHESTRATOR    | Fechas objetivo: 2025-11-01
+2025-11-12 17:53:20 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-12 17:53:20 | INFO     | -        | ORCHESTRATOR    |   PASO 1: OBTENIENDO ÓRDENES DE SHOPIFY
+2025-11-12 17:53:20 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-12 17:53:20 | INFO     | -        | ORDER_FETCHER   | ======================================================================
+2025-11-12 17:53:20 | INFO     | -        | ORDER_FETCHER   |   OBTENIENDO ÓRDENES DE SHOPIFY
+2025-11-12 17:53:20 | INFO     | -        | ORDER_FETCHER   | ======================================================================
+2025-11-12 17:53:20 | INFO     | -        | ORDER_FETCHER   | Fechas a consultar: 2025-11-01
+2025-11-12 17:53:20 | INFO     | -        | ORDER_FETCHER   | Estado financiero: paid
+2025-11-12 17:53:20 | INFO     | -        | ORDER_FETCHER   | Plataformas: 3
+2025-11-12 17:53:20 | INFO     | -        | ORDER_FETCHER   | ----------------------------------------------------------------------
+2025-11-12 17:53:20 | INFO     | -        | ORDER_FETCHER   |   Consultando fecha: 2025-11-01
+2025-11-12 17:53:20 | INFO     | -        | ORDER_FETCHER   | ----------------------------------------------------------------------
+2025-11-12 17:53:20 | INFO     | ROOMI    | ORDER_FETCHER   | Consultando ROOMI...
+2025-11-12 17:53:20 | INFO     | ROOMI    | SHOPIFY         | Consultando órdenes del 2025-11-01
+2025-11-12 17:53:22 | INFO     | ROOMI    | SHOPIFY         | Total obtenido: 0 órdenes
+2025-11-12 17:53:22 | INFO     | -        | TIMING          | Completado: Shopify: Fetch Orders (⏱️ 1.40s)
+2025-11-12 17:53:22 | INFO     | ROOMI    | ORDER_FETCHER   | ✓ ROOMI: 0 órdenes obtenidas
+2025-11-12 17:53:22 | INFO     | SPRING   | ORDER_FETCHER   | Consultando SPRING...
+2025-11-12 17:53:22 | INFO     | SPRING   | SHOPIFY         | Consultando órdenes del 2025-11-01
+2025-11-12 17:53:22 | INFO     | SPRING   | SHOPIFY         | Página 1: 18 órdenes obtenidas
+2025-11-12 17:53:22 | INFO     | SPRING   | SHOPIFY         | Total obtenido: 18 órdenes
+2025-11-12 17:53:22 | INFO     | -        | TIMING          | Completado: Shopify: Fetch Orders (⏱️ 0.61s)
+2025-11-12 17:53:22 | INFO     | SPRING   | ORDER_FETCHER   | ✓ SPRING: 18 órdenes obtenidas
+2025-11-12 17:53:22 | INFO     | ROOMI_ATLAS | ORDER_FETCHER   | Consultando ROOMI_ATLAS...
+2025-11-12 17:53:22 | INFO     | ROOMI_ATLAS | SHOPIFY         | Consultando órdenes del 2025-11-01
+2025-11-12 17:53:23 | INFO     | ROOMI_ATLAS | SHOPIFY         | Página 1: 11 órdenes obtenidas
+2025-11-12 17:53:23 | INFO     | ROOMI_ATLAS | SHOPIFY         | Total obtenido: 11 órdenes
+2025-11-12 17:53:23 | INFO     | -        | TIMING          | Completado: Shopify: Fetch Orders (⏱️ 0.41s)
+2025-11-12 17:53:23 | INFO     | ROOMI_ATLAS | ORDER_FETCHER   | ✓ ROOMI_ATLAS: 11 órdenes obtenidas
+2025-11-12 17:53:23 | INFO     | -        | ORDER_FETCHER   | ----------------------------------------------------------------------
+2025-11-12 17:53:23 | INFO     | -        | ORDER_FETCHER   |   Resumen de Órdenes Obtenidas
+2025-11-12 17:53:23 | INFO     | -        | ORDER_FETCHER   | ----------------------------------------------------------------------
+2025-11-12 17:53:23 | INFO     | ROOMI_ATLAS | ORDER_FETCHER   |   ROOMI_ATLAS: 11 órdenes
+2025-11-12 17:53:23 | INFO     | SPRING   | ORDER_FETCHER   |   SPRING: 18 órdenes
+2025-11-12 17:53:23 | INFO     | -        | ORDER_FETCHER   |   TOTAL: 29 órdenes
+2025-11-12 17:53:23 | INFO     | -        | TIMING          | Completado: Fetch All Orders (⏱️ 2.43s)
+2025-11-12 17:53:23 | INFO     | -        | ORCHESTRATOR    | ✓ Total órdenes obtenidas: 29
+2025-11-12 17:53:23 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-12 17:53:23 | INFO     | -        | ORCHESTRATOR    |   PASO 2: VALIDANDO CONTRA INTELISIS
+2025-11-12 17:53:23 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-12 17:53:23 | INFO     | -        | VALIDATOR       | ======================================================================
+2025-11-12 17:53:23 | INFO     | -        | VALIDATOR       |   VALIDANDO ÓRDENES CONTRA INTELISIS
+2025-11-12 17:53:23 | INFO     | -        | VALIDATOR       | ======================================================================
+2025-11-12 17:53:23 | INFO     | -        | VALIDATOR       | Consultando Intelisis para: 2025-11-01
+2025-11-12 17:53:23 | INFO     | -        | INTELISIS       | Consultando Intelisis para el día: 2025-11-01
+2025-11-12 17:53:23 | INFO     | -        | INTELISIS       | Filtrando por sucursales: [389, 98]
+2025-11-12 17:53:25 | INFO     | -        | INTELISIS       | Página 0: 47/1597 registros válidos
+2025-11-12 17:53:25 | INFO     | -        | INTELISIS       | Total registros obtenidos: 47
+2025-11-12 17:53:25 | INFO     | -        | INTELISIS       | ----------------------------------------------------------------------
+2025-11-12 17:53:25 | INFO     | -        | INTELISIS       |   Distribución por Sucursal
+2025-11-12 17:53:25 | INFO     | -        | INTELISIS       | ----------------------------------------------------------------------
+2025-11-12 17:53:25 | INFO     | -        | INTELISIS       |   Sucursal 98 (ROOMI_ATLAS): 11 registros
+2025-11-12 17:53:25 | INFO     | -        | INTELISIS       |   Sucursal 389 (SPRING): 36 registros
+2025-11-12 17:53:25 | INFO     | -        | TIMING          | Completado: Intelisis: Fetch Data (⏱️ 2.47s)
+2025-11-12 17:53:25 | INFO     | -        | VALIDATOR       | Índice creado: 26 órdenes únicas en Intelisis
+2025-11-12 17:53:25 | WARNING  | SPRING   | VALIDATION      | Order 6943181242477: ⚠ No encontrado en Intelisis
+2025-11-12 17:53:25 | WARNING  | SPRING   | VALIDATION      | Order 6942882824301: ⚠ Diferencias detectadas
+2025-11-12 17:53:25 | WARNING  | ROOMI_ATLAS | VALIDATION      | Order 6060928237621: ⚠ No encontrado en Intelisis
+2025-11-12 17:53:25 | WARNING  | ROOMI_ATLAS | VALIDATION      | Order 6060497666101: ⚠ No encontrado en Intelisis
+2025-11-12 17:53:25 | INFO     | -        | VALIDATOR       | ----------------------------------------------------------------------
+2025-11-12 17:53:25 | INFO     | -        | VALIDATOR       |   Buscando 3 órdenes no encontradas en día siguiente
+2025-11-12 17:53:25 | INFO     | -        | VALIDATOR       | ----------------------------------------------------------------------
+2025-11-12 17:53:25 | INFO     | -        | VALIDATOR       | Consultando: 2025-11-02
+2025-11-12 17:53:25 | INFO     | -        | INTELISIS       | Consultando Intelisis para el día: 2025-11-02
+2025-11-12 17:53:25 | INFO     | -        | INTELISIS       | Filtrando por sucursales: [389, 98]
+2025-11-12 17:53:28 | INFO     | -        | INTELISIS       | Página 0: 48/2192 registros válidos
+2025-11-12 17:53:28 | INFO     | -        | INTELISIS       | Total registros obtenidos: 48
+2025-11-12 17:53:28 | INFO     | -        | INTELISIS       | ----------------------------------------------------------------------
+2025-11-12 17:53:28 | INFO     | -        | INTELISIS       |   Distribución por Sucursal
+2025-11-12 17:53:28 | INFO     | -        | INTELISIS       | ----------------------------------------------------------------------
+2025-11-12 17:53:28 | INFO     | -        | INTELISIS       |   Sucursal 98 (ROOMI_ATLAS): 10 registros
+2025-11-12 17:53:28 | INFO     | -        | INTELISIS       |   Sucursal 389 (SPRING): 38 registros
+2025-11-12 17:53:28 | INFO     | -        | TIMING          | Completado: Intelisis: Fetch Data (⏱️ 2.70s)
+2025-11-12 17:53:28 | INFO     | -        | VALIDATOR       | Índice creado: 28 órdenes únicas en Intelisis
+2025-11-12 17:53:28 | INFO     | -        | VALIDATOR       | Encontradas 0/3 órdenes en día siguiente
+2025-11-12 17:53:28 | INFO     | -        | VALIDATOR       | ----------------------------------------------------------------------
+2025-11-12 17:53:28 | INFO     | -        | VALIDATOR       |   Resumen de Validación
+2025-11-12 17:53:28 | INFO     | -        | VALIDATOR       | ----------------------------------------------------------------------
+2025-11-12 17:53:28 | INFO     | -        | VALIDATOR       | Total órdenes: 29
+✅ OK: 25
+⚠️ Con diferencias: 1
+❌ No encontrados: 3
+📅 Encontrados día siguiente: 0
+Tasa de éxito: 86.2%
+
+Por plataforma:
+  SPRING: 18 total (16 OK, 1 dif, 1 no encontrados)
+  ROOMI_ATLAS: 11 total (9 OK, 0 dif, 2 no encontrados)
+2025-11-12 17:53:28 | INFO     | -        | TIMING          | Completado: Validate All Orders (⏱️ 5.18s)
+2025-11-12 17:53:28 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-12 17:53:28 | INFO     | -        | ORCHESTRATOR    |   PROCESO COMPLETADO
+2025-11-12 17:53:28 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-12 17:53:28 | INFO     | -        | ORCHESTRATOR    | Total órdenes procesadas: 29
+2025-11-12 17:53:28 | INFO     | -        | ORCHESTRATOR    | ✅ Validaciones OK: 25
+2025-11-12 17:53:28 | INFO     | -        | ORCHESTRATOR    | ⚠️  Con diferencias: 1
+2025-11-12 17:53:28 | INFO     | -        | ORCHESTRATOR    | ❌ No encontradas: 3
+2025-11-12 17:53:28 | INFO     | -        | ORCHESTRATOR    | Tasa de éxito: 86.2%
+2025-11-12 17:53:28 | INFO     | -        | ORCHESTRATOR    | ----------------------------------------------------------------------
+2025-11-12 17:53:28 | INFO     | -        | ORCHESTRATOR    |   Detalle por Plataforma
+2025-11-12 17:53:28 | INFO     | -        | ORCHESTRATOR    | ----------------------------------------------------------------------
+2025-11-12 17:53:28 | INFO     | SPRING   | ORCHESTRATOR    | SPRING: 16/18 OK (1 dif, 1 no encontrados)
+2025-11-12 17:53:28 | INFO     | ROOMI_ATLAS | ORCHESTRATOR    | ROOMI_ATLAS: 9/11 OK (0 dif, 2 no encontrados)
+2025-11-12 17:53:28 | INFO     | -        | TIMING          | Completado: Complete Validation Process (⏱️ 7.62s)
+2025-11-12 17:53:28 | INFO     | -        | MAIN            | ======================================================================
+2025-11-12 17:53:28 | INFO     | -        | MAIN            |   PASO 3: GENERANDO REPORTES
+2025-11-12 17:53:28 | INFO     | -        | MAIN            | ======================================================================
+2025-11-12 17:53:28 | INFO     | -        | EXCEL_REPORTER  | Iniciando generación de reporte: EXCEL_REPORTER
+2025-11-12 17:53:28 | INFO     | -        | EXCEL_REPORTER  | Creando archivo Excel: C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\output\consulta_validacion.xlsx
+2025-11-12 17:53:28 | INFO     | -        | EXCEL_REPORTER  | Total registros: 29
+2025-11-12 17:53:28 | INFO     | -        | EXCEL_REPORTER  | ✓ Archivo guardado: C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\output\consulta_validacion.xlsx
+2025-11-12 17:53:28 | INFO     | -        | EXCEL_REPORTER  | Tamaño del archivo: 8,892 bytes
+2025-11-12 17:53:28 | INFO     | -        | EXCEL_REPORTER  | ✓ Reporte generado exitosamente: EXCEL_REPORTER
+2025-11-12 17:53:28 | INFO     | -        | MAIN            | ✓ Excel guardado en: C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\output\consulta_validacion.xlsx
+2025-11-12 17:53:28 | INFO     | -        | EMAIL_REPORTER  | Iniciando generación de reporte: EMAIL_REPORTER
+2025-11-12 17:53:28 | INFO     | -        | EMAIL_REPORTER  | Preparando email para: analistajr@gcatlas.mx
+2025-11-12 17:53:28 | INFO     | -        | EMAIL_REPORTER  | Conectando al servidor SMTP...
+2025-11-12 17:53:29 | INFO     | -        | EMAIL_REPORTER  | Enviando email a: analistajr@gcatlas.mx
+2025-11-12 17:53:30 | INFO     | -        | EMAIL_REPORTER  | ✓ Email enviado exitosamente
+2025-11-12 17:53:30 | INFO     | -        | EMAIL_REPORTER  | ✓ Reporte generado exitosamente: EMAIL_REPORTER
+2025-11-12 17:53:30 | INFO     | -        | MAIN            | ✓ Email enviado a: analistajr@gcatlas.mx
+2025-11-12 17:53:30 | INFO     | -        | MAIN            | ======================================================================
+2025-11-12 17:53:30 | INFO     | -        | MAIN            |   RESUMEN FINAL
+2025-11-12 17:53:30 | INFO     | -        | MAIN            | ======================================================================
+2025-11-12 17:53:30 | INFO     | -        | MAIN            | 📅 Fecha(s): 2025-11-01
+2025-11-12 17:53:30 | INFO     | -        | MAIN            | 📊 Total órdenes: 29
+2025-11-12 17:53:30 | INFO     | -        | MAIN            | ✅ Validaciones OK: 25
+2025-11-12 17:53:30 | INFO     | -        | MAIN            | ⚠️  Con diferencias: 1
+2025-11-12 17:53:30 | INFO     | -        | MAIN            | ❌ No encontradas: 3
+2025-11-12 17:53:30 | INFO     | -        | MAIN            | 📈 Tasa de éxito: 86.2%
+2025-11-12 17:53:30 | INFO     | -        | MAIN            | 
+2025-11-12 17:53:30 | INFO     | -        | MAIN            | Por plataforma:
+2025-11-12 17:53:30 | INFO     | -        | MAIN            |   SPRING: 16/18 OK (1 dif, 1 no encontrados)
+2025-11-12 17:53:30 | INFO     | -        | MAIN            |   ROOMI_ATLAS: 9/11 OK (0 dif, 2 no encontrados)
+2025-11-12 17:53:30 | INFO     | -        | MAIN            | 
+2025-11-12 17:53:30 | INFO     | -        | MAIN            | ======================================================================
+2025-11-12 17:53:30 | INFO     | -        | MAIN            | ✅ PROCESO COMPLETADO EXITOSAMENTE
+2025-11-12 17:53:30 | INFO     | -        | MAIN            | ======================================================================

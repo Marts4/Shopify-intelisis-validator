@@ -1,0 +1,1118 @@
+2025-11-20 12:00:38 | INFO     | -        | SYSTEM          | ======================================================================
+2025-11-20 12:00:38 | INFO     | -        | SYSTEM          | Sistema de Validación Shopify-Intelisis iniciado
+2025-11-20 12:00:38 | INFO     | -        | SYSTEM          | Nivel de logging: INFO
+2025-11-20 12:00:38 | INFO     | -        | SYSTEM          | Directorio de logs: C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\logs
+2025-11-20 12:00:38 | INFO     | -        | SYSTEM          | Plataformas habilitadas: 3
+2025-11-20 12:00:38 | INFO     | -        | SYSTEM          |   - ROOMI (Branch: 442)
+2025-11-20 12:00:38 | INFO     | -        | SYSTEM          |   - SPRING (Branch: 389)
+2025-11-20 12:00:38 | INFO     | -        | SYSTEM          |   - ATLAS (Branch: 98)
+2025-11-20 12:00:38 | INFO     | -        | SYSTEM          | ======================================================================
+2025-11-20 12:00:42 | INFO     | -        | MAIN            | ======================================================================
+2025-11-20 12:00:42 | INFO     | -        | MAIN            | SISTEMA DE VALIDACIÓN SHOPIFY-INTELISIS v2.0
+2025-11-20 12:00:42 | INFO     | -        | MAIN            | ======================================================================
+2025-11-20 12:00:42 | INFO     | ROOMI    | ORDER_FETCHER   | Cliente inicializado para ROOMI
+2025-11-20 12:00:42 | INFO     | SPRING   | ORDER_FETCHER   | Cliente inicializado para SPRING
+2025-11-20 12:00:42 | INFO     | ATLAS    | ORDER_FETCHER   | Cliente inicializado para ATLAS
+2025-11-20 12:00:42 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-20 12:00:42 | INFO     | -        | ORCHESTRATOR    |   INICIO DE VALIDACIÓN SHOPIFY-INTELISIS
+2025-11-20 12:00:42 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-20 12:00:42 | INFO     | -        | ORCHESTRATOR    | Timestamp: 2025-11-20 12:00:42
+2025-11-20 12:00:42 | INFO     | -        | ORCHESTRATOR    | Modo: MANUAL
+2025-11-20 12:00:42 | INFO     | -        | ORCHESTRATOR    | Plataformas habilitadas: 3
+2025-11-20 12:00:42 | INFO     | -        | ORCHESTRATOR    | Estado financiero: paid
+2025-11-20 12:00:42 | INFO     | -        | ORCHESTRATOR    | Tolerancia en totales: $1.0
+2025-11-20 12:00:42 | INFO     | -        | ORCHESTRATOR    | Plataformas:
+2025-11-20 12:00:42 | INFO     | ROOMI    | ORCHESTRATOR    |   - ROOMI (Sucursal: 442)
+2025-11-20 12:00:42 | INFO     | SPRING   | ORCHESTRATOR    |   - SPRING (Sucursal: 389)
+2025-11-20 12:00:42 | INFO     | ATLAS    | ORCHESTRATOR    |   - ATLAS (Sucursal: 98)
+2025-11-20 12:00:42 | INFO     | -        | DATE_UTILS      | Modo MANUAL: 2025-11-16
+2025-11-20 12:00:42 | INFO     | -        | ORCHESTRATOR    | Fechas objetivo: 2025-11-16
+2025-11-20 12:00:42 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-20 12:00:42 | INFO     | -        | ORCHESTRATOR    |   PASO 1: OBTENIENDO ÓRDENES DE SHOPIFY
+2025-11-20 12:00:42 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-20 12:00:42 | INFO     | -        | ORDER_FETCHER   | ======================================================================
+2025-11-20 12:00:42 | INFO     | -        | ORDER_FETCHER   |   OBTENIENDO ÓRDENES DE SHOPIFY
+2025-11-20 12:00:42 | INFO     | -        | ORDER_FETCHER   | ======================================================================
+2025-11-20 12:00:42 | INFO     | -        | ORDER_FETCHER   | Fechas a consultar: 2025-11-16
+2025-11-20 12:00:42 | INFO     | -        | ORDER_FETCHER   | Estado financiero: paid
+2025-11-20 12:00:42 | INFO     | -        | ORDER_FETCHER   | Plataformas: 3
+2025-11-20 12:00:42 | INFO     | -        | ORDER_FETCHER   | ----------------------------------------------------------------------
+2025-11-20 12:00:42 | INFO     | -        | ORDER_FETCHER   |   Consultando fecha: 2025-11-16
+2025-11-20 12:00:42 | INFO     | -        | ORDER_FETCHER   | ----------------------------------------------------------------------
+2025-11-20 12:00:42 | INFO     | ROOMI    | ORDER_FETCHER   | Consultando ROOMI...
+2025-11-20 12:00:42 | INFO     | ROOMI    | SHOPIFY         | Consultando órdenes del 2025-11-16
+2025-11-20 12:00:42 | INFO     | ROOMI    | SHOPIFY         | Total obtenido: 0 órdenes
+2025-11-20 12:00:42 | INFO     | -        | TIMING          | Completado: Shopify: Fetch Orders (⏱️ 0.62s)
+2025-11-20 12:00:42 | INFO     | ROOMI    | ORDER_FETCHER   | ✓ ROOMI: 0 órdenes obtenidas
+2025-11-20 12:00:42 | INFO     | SPRING   | ORDER_FETCHER   | Consultando SPRING...
+2025-11-20 12:00:42 | INFO     | SPRING   | SHOPIFY         | Consultando órdenes del 2025-11-16
+2025-11-20 12:00:48 | INFO     | SPRING   | SHOPIFY         | Página 1: 158 órdenes obtenidas
+2025-11-20 12:00:48 | INFO     | SPRING   | SHOPIFY         | Total obtenido: 158 órdenes
+2025-11-20 12:00:48 | INFO     | -        | TIMING          | Completado: Shopify: Fetch Orders (⏱️ 5.41s)
+2025-11-20 12:00:48 | INFO     | SPRING   | ORDER_FETCHER   | ✓ SPRING: 158 órdenes obtenidas
+2025-11-20 12:00:48 | INFO     | ATLAS    | ORDER_FETCHER   | Consultando ATLAS...
+2025-11-20 12:00:48 | INFO     | ATLAS    | SHOPIFY         | Consultando órdenes del 2025-11-16
+2025-11-20 12:00:51 | INFO     | ATLAS    | SHOPIFY         | Página 1: 108 órdenes obtenidas
+2025-11-20 12:00:51 | INFO     | ATLAS    | SHOPIFY         | Total obtenido: 108 órdenes
+2025-11-20 12:00:51 | INFO     | -        | TIMING          | Completado: Shopify: Fetch Orders (⏱️ 2.80s)
+2025-11-20 12:00:51 | INFO     | ATLAS    | ORDER_FETCHER   | ✓ ATLAS: 108 órdenes obtenidas
+2025-11-20 12:00:51 | INFO     | -        | RAW_DATA_REPORTER | Guardando datos crudos de Shopify: 266 órdenes
+2025-11-20 12:00:51 | INFO     | -        | RAW_DATA_REPORTER | Archivo: consulta_shop_20251116.xlsx
+2025-11-20 12:00:51 | ERROR    | -        | ORDER_FETCHER   | Error guardando datos crudos Shopify: Error guardando datos Shopify: The truth value of an empty array is ambiguous. Use `array.size > 0` to check that an array is not empty.
+2025-11-20 12:00:51 | INFO     | -        | ORDER_FETCHER   | ----------------------------------------------------------------------
+2025-11-20 12:00:51 | INFO     | -        | ORDER_FETCHER   |   Resumen de Órdenes Obtenidas
+2025-11-20 12:00:51 | INFO     | -        | ORDER_FETCHER   | ----------------------------------------------------------------------
+2025-11-20 12:00:51 | INFO     | ATLAS    | ORDER_FETCHER   |   ATLAS: 108 órdenes
+2025-11-20 12:00:51 | INFO     | SPRING   | ORDER_FETCHER   |   SPRING: 158 órdenes
+2025-11-20 12:00:51 | INFO     | -        | ORDER_FETCHER   |   TOTAL: 266 órdenes
+2025-11-20 12:00:51 | INFO     | -        | TIMING          | Completado: Fetch All Orders (⏱️ 8.89s)
+2025-11-20 12:00:51 | INFO     | -        | ORCHESTRATOR    | ✓ Total órdenes obtenidas: 266
+2025-11-20 12:00:51 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-20 12:00:51 | INFO     | -        | ORCHESTRATOR    |   PASO 2: VALIDANDO CONTRA INTELISIS
+2025-11-20 12:00:51 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-20 12:00:51 | INFO     | -        | VALIDATOR       | ======================================================================
+2025-11-20 12:00:51 | INFO     | -        | VALIDATOR       |   VALIDANDO ÓRDENES CONTRA INTELISIS
+2025-11-20 12:00:51 | INFO     | -        | VALIDATOR       | ======================================================================
+2025-11-20 12:00:51 | INFO     | -        | VALIDATOR       | Consultando Intelisis para: 2025-11-16
+2025-11-20 12:00:51 | INFO     | -        | INTELISIS       | Consultando Intelisis para el día: 2025-11-16
+2025-11-20 12:00:51 | INFO     | -        | INTELISIS       | Filtrando por sucursales: [389, 98]
+2025-11-20 12:01:02 | INFO     | -        | INTELISIS       | Página 1: 213/10000 registros válidos
+2025-11-20 12:01:12 | INFO     | -        | INTELISIS       | Página 2: 247/10000 registros válidos
+2025-11-20 12:01:16 | INFO     | -        | INTELISIS       | Página 3: 44/641 registros válidos
+2025-11-20 12:01:16 | INFO     | -        | INTELISIS       | Total registros obtenidos: 504
+2025-11-20 12:01:16 | INFO     | -        | INTELISIS       | ----------------------------------------------------------------------
+2025-11-20 12:01:16 | INFO     | -        | INTELISIS       |   Distribución por Sucursal
+2025-11-20 12:01:16 | INFO     | -        | INTELISIS       | ----------------------------------------------------------------------
+2025-11-20 12:01:16 | INFO     | -        | INTELISIS       |   Sucursal 98 (ATLAS): 151 registros
+2025-11-20 12:01:16 | INFO     | -        | INTELISIS       |   Sucursal 389 (SPRING): 353 registros
+2025-11-20 12:01:16 | INFO     | -        | TIMING          | Completado: Intelisis: Fetch Data (⏱️ 25.04s)
+2025-11-20 12:01:16 | INFO     | -        | RAW_DATA_REPORTER | Guardando datos crudos de Intelisis: 504 registros
+2025-11-20 12:01:16 | INFO     | -        | RAW_DATA_REPORTER | Archivo: consulta_intelisis_20251116.xlsx
+2025-11-20 12:01:20 | INFO     | -        | RAW_DATA_REPORTER | ✓ Datos guardados: consulta_intelisis_20251116.xlsx (504 registros)
+2025-11-20 12:01:20 | INFO     | -        | VALIDATOR       | Índice creado: 269 órdenes únicas en Intelisis
+2025-11-20 12:01:20 | WARNING  | SPRING   | VALIDATION      | Order 7004292612205: ⚠ No encontrado en Intelisis
+2025-11-20 12:01:20 | WARNING  | SPRING   | VALIDATION      | Order 7004282781805: ⚠ No encontrado en Intelisis
+2025-11-20 12:01:20 | WARNING  | SPRING   | VALIDATION      | Order 7004272099437: ⚠ No encontrado en Intelisis
+2025-11-20 12:01:20 | WARNING  | SPRING   | VALIDATION      | Order 7004269707373: ⚠ No encontrado en Intelisis
+2025-11-20 12:01:20 | WARNING  | SPRING   | VALIDATION      | Order 7004161081453: ⚠ No encontrado en Intelisis
+2025-11-20 12:01:20 | WARNING  | SPRING   | VALIDATION      | Order 7004136898669: ⚠ Diferencias detectadas
+2025-11-20 12:01:20 | WARNING  | SPRING   | VALIDATION      | Order 7004132474989: ⚠ No encontrado en Intelisis
+2025-11-20 12:01:20 | WARNING  | SPRING   | VALIDATION      | Order 7003880980589: ⚠ No encontrado en Intelisis
+2025-11-20 12:01:20 | WARNING  | SPRING   | VALIDATION      | Order 7003830059117: ⚠ No encontrado en Intelisis
+2025-11-20 12:01:20 | WARNING  | SPRING   | VALIDATION      | Order 7003804369005: ⚠ Diferencias detectadas
+2025-11-20 12:01:20 | WARNING  | SPRING   | VALIDATION      | Order 7003538423917: ⚠ Diferencias detectadas
+2025-11-20 12:01:20 | WARNING  | SPRING   | VALIDATION      | Order 7003429797997: ⚠ No encontrado en Intelisis
+2025-11-20 12:01:20 | WARNING  | SPRING   | VALIDATION      | Order 7003417247853: ⚠ Diferencias detectadas
+2025-11-20 12:01:20 | WARNING  | SPRING   | VALIDATION      | Order 7003290533997: ⚠ No encontrado en Intelisis
+2025-11-20 12:01:20 | WARNING  | SPRING   | VALIDATION      | Order 7002524024941: ⚠ No encontrado en Intelisis
+2025-11-20 12:01:20 | WARNING  | ATLAS    | VALIDATION      | Order 6084665475125: ⚠ No encontrado en Intelisis
+2025-11-20 12:01:20 | WARNING  | ATLAS    | VALIDATION      | Order 6084652204085: ⚠ No encontrado en Intelisis
+2025-11-20 12:01:20 | WARNING  | ATLAS    | VALIDATION      | Order 6084586799157: ⚠ No encontrado en Intelisis
+2025-11-20 12:01:20 | WARNING  | ATLAS    | VALIDATION      | Order 6084576182325: ⚠ No encontrado en Intelisis
+2025-11-20 12:01:20 | WARNING  | ATLAS    | VALIDATION      | Order 6084531847221: ⚠ No encontrado en Intelisis
+2025-11-20 12:01:20 | WARNING  | ATLAS    | VALIDATION      | Order 6084406313013: ⚠ No encontrado en Intelisis
+2025-11-20 12:01:20 | WARNING  | ATLAS    | VALIDATION      | Order 6084360011829: ⚠ No encontrado en Intelisis
+2025-11-20 12:01:20 | WARNING  | ATLAS    | VALIDATION      | Order 6084328947765: ⚠ No encontrado en Intelisis
+2025-11-20 12:01:20 | WARNING  | ATLAS    | VALIDATION      | Order 6084314595381: ⚠ No encontrado en Intelisis
+2025-11-20 12:01:20 | WARNING  | ATLAS    | VALIDATION      | Order 6084244045877: ⚠ No encontrado en Intelisis
+2025-11-20 12:01:20 | WARNING  | ATLAS    | VALIDATION      | Order 6084031152181: ⚠ No encontrado en Intelisis
+2025-11-20 12:01:20 | WARNING  | ATLAS    | VALIDATION      | Order 6083761143861: ⚠ No encontrado en Intelisis
+2025-11-20 12:01:20 | INFO     | -        | VALIDATOR       | ----------------------------------------------------------------------
+2025-11-20 12:01:20 | INFO     | -        | VALIDATOR       |   Buscando 23 órdenes no encontradas en día siguiente
+2025-11-20 12:01:20 | INFO     | -        | VALIDATOR       | ----------------------------------------------------------------------
+2025-11-20 12:01:20 | INFO     | -        | VALIDATOR       | Consultando: 2025-11-17
+2025-11-20 12:01:20 | INFO     | -        | INTELISIS       | Consultando Intelisis para el día: 2025-11-17
+2025-11-20 12:01:20 | INFO     | -        | INTELISIS       | Filtrando por sucursales: [389, 98]
+2025-11-20 12:01:31 | INFO     | -        | INTELISIS       | Página 1: 302/10000 registros válidos
+2025-11-20 12:01:43 | INFO     | -        | INTELISIS       | Página 2: 212/10000 registros válidos
+2025-11-20 12:01:55 | INFO     | -        | INTELISIS       | Página 3: 376/10000 registros válidos
+2025-11-20 12:02:01 | INFO     | -        | INTELISIS       | Página 4: 0/117 registros válidos
+2025-11-20 12:02:01 | INFO     | -        | INTELISIS       | Total registros obtenidos: 890
+2025-11-20 12:02:01 | INFO     | -        | INTELISIS       | ----------------------------------------------------------------------
+2025-11-20 12:02:01 | INFO     | -        | INTELISIS       |   Distribución por Sucursal
+2025-11-20 12:02:01 | INFO     | -        | INTELISIS       | ----------------------------------------------------------------------
+2025-11-20 12:02:01 | INFO     | -        | INTELISIS       |   Sucursal 98 (ATLAS): 252 registros
+2025-11-20 12:02:01 | INFO     | -        | INTELISIS       |   Sucursal 389 (SPRING): 638 registros
+2025-11-20 12:02:01 | INFO     | -        | TIMING          | Completado: Intelisis: Fetch Data (⏱️ 40.86s)
+2025-11-20 12:02:01 | INFO     | -        | VALIDATOR       | Índice creado: 484 órdenes únicas en Intelisis
+2025-11-20 12:02:01 | INFO     | SPRING   | VALIDATOR       | ✓ Orden 7004292612205 encontrada en día siguiente
+2025-11-20 12:02:01 | INFO     | SPRING   | VALIDATOR       | ✓ Orden 7004282781805 encontrada en día siguiente
+2025-11-20 12:02:01 | INFO     | SPRING   | VALIDATOR       | ✓ Orden 7004272099437 encontrada en día siguiente
+2025-11-20 12:02:01 | INFO     | SPRING   | VALIDATOR       | ✓ Orden 7004269707373 encontrada en día siguiente
+2025-11-20 12:02:01 | INFO     | SPRING   | VALIDATOR       | ✓ Orden 7004161081453 encontrada en día siguiente
+2025-11-20 12:02:01 | INFO     | SPRING   | VALIDATOR       | ✓ Orden 7004132474989 encontrada en día siguiente
+2025-11-20 12:02:01 | INFO     | SPRING   | VALIDATOR       | ✓ Orden 7003830059117 encontrada en día siguiente
+2025-11-20 12:02:01 | INFO     | ATLAS    | VALIDATOR       | ✓ Orden 6084665475125 encontrada en día siguiente
+2025-11-20 12:02:01 | INFO     | ATLAS    | VALIDATOR       | ✓ Orden 6084652204085 encontrada en día siguiente
+2025-11-20 12:02:01 | INFO     | ATLAS    | VALIDATOR       | ✓ Orden 6084576182325 encontrada en día siguiente
+2025-11-20 12:02:01 | INFO     | ATLAS    | VALIDATOR       | ✓ Orden 6084328947765 encontrada en día siguiente
+2025-11-20 12:02:01 | INFO     | ATLAS    | VALIDATOR       | ✓ Orden 6084314595381 encontrada en día siguiente
+2025-11-20 12:02:01 | INFO     | ATLAS    | VALIDATOR       | ✓ Orden 6084031152181 encontrada en día siguiente
+2025-11-20 12:02:01 | INFO     | -        | VALIDATOR       | Encontradas 13/23 órdenes en día siguiente
+2025-11-20 12:02:01 | INFO     | -        | VALIDATOR       | ----------------------------------------------------------------------
+2025-11-20 12:02:01 | INFO     | -        | VALIDATOR       |   Resumen de Validación
+2025-11-20 12:02:01 | INFO     | -        | VALIDATOR       | ----------------------------------------------------------------------
+2025-11-20 12:02:01 | INFO     | -        | VALIDATOR       | Total órdenes: 266
+✅ OK: 239
+⚠️ Con diferencias: 17
+❌ No encontrados: 10
+📅 Encontrados día siguiente: 13
+Tasa de éxito: 89.8%
+
+Por plataforma:
+  SPRING: 158 total (143 OK, 11 dif, 4 no encontrados)
+  ATLAS: 108 total (96 OK, 6 dif, 6 no encontrados)
+2025-11-20 12:02:01 | INFO     | -        | TIMING          | Completado: Validate All Orders (⏱️ 70.53s)
+2025-11-20 12:02:01 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-20 12:02:01 | INFO     | -        | ORCHESTRATOR    |   PROCESO COMPLETADO
+2025-11-20 12:02:01 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-20 12:02:01 | INFO     | -        | ORCHESTRATOR    | Total órdenes procesadas: 266
+2025-11-20 12:02:01 | INFO     | -        | ORCHESTRATOR    | ✅ Validaciones OK: 239
+2025-11-20 12:02:01 | INFO     | -        | ORCHESTRATOR    | ⚠️  Con diferencias: 17
+2025-11-20 12:02:01 | INFO     | -        | ORCHESTRATOR    | ❌ No encontradas: 10
+2025-11-20 12:02:01 | INFO     | -        | ORCHESTRATOR    | 📅 Encontradas día siguiente: 13
+2025-11-20 12:02:01 | INFO     | -        | ORCHESTRATOR    | Tasa de éxito: 89.8%
+2025-11-20 12:02:01 | INFO     | -        | ORCHESTRATOR    | ----------------------------------------------------------------------
+2025-11-20 12:02:01 | INFO     | -        | ORCHESTRATOR    |   Detalle por Plataforma
+2025-11-20 12:02:01 | INFO     | -        | ORCHESTRATOR    | ----------------------------------------------------------------------
+2025-11-20 12:02:01 | INFO     | SPRING   | ORCHESTRATOR    | SPRING: 143/158 OK (11 dif, 4 no encontrados)
+2025-11-20 12:02:01 | INFO     | ATLAS    | ORCHESTRATOR    | ATLAS: 96/108 OK (6 dif, 6 no encontrados)
+2025-11-20 12:02:01 | INFO     | -        | ORCHESTRATOR    | ----------------------------------------------------------------------
+2025-11-20 12:02:01 | INFO     | -        | ORCHESTRATOR    |   Archivos de Datos Crudos Generados
+2025-11-20 12:02:01 | INFO     | -        | ORCHESTRATOR    | ----------------------------------------------------------------------
+2025-11-20 12:02:01 | INFO     | -        | ORCHESTRATOR    | 📄 Archivos Intelisis generados: 1
+2025-11-20 12:02:01 | WARNING  | -        | ORCHESTRATOR    | No se pudo generar resumen de archivos crudos: name 'Path' is not defined
+2025-11-20 12:02:01 | INFO     | -        | TIMING          | Completado: Complete Validation Process (⏱️ 79.43s)
+2025-11-20 12:02:01 | INFO     | -        | MAIN            | ======================================================================
+2025-11-20 12:02:01 | INFO     | -        | MAIN            |   PASO 3: GENERANDO REPORTES
+2025-11-20 12:02:01 | INFO     | -        | MAIN            | ======================================================================
+2025-11-20 12:02:01 | INFO     | -        | EXCEL_REPORTER  | Iniciando generación de reporte: EXCEL_REPORTER
+2025-11-20 12:02:01 | INFO     | -        | EXCEL_REPORTER  | Creando archivo Excel: C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\output\consulta_validacion.xlsx
+2025-11-20 12:02:01 | INFO     | -        | EXCEL_REPORTER  | Total registros: 266
+2025-11-20 12:02:02 | INFO     | -        | EXCEL_REPORTER  | ✓ Archivo guardado: C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\output\consulta_validacion.xlsx
+2025-11-20 12:02:02 | INFO     | -        | EXCEL_REPORTER  | Tamaño del archivo: 35,406 bytes
+2025-11-20 12:02:02 | INFO     | -        | EXCEL_REPORTER  | ✓ Reporte generado exitosamente: EXCEL_REPORTER
+2025-11-20 12:02:02 | INFO     | -        | MAIN            | ✓ Excel guardado en: C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\output\consulta_validacion.xlsx
+2025-11-20 12:02:02 | INFO     | -        | EMAIL_REPORTER  | Iniciando generación de reporte: EMAIL_REPORTER
+2025-11-20 12:02:02 | INFO     | -        | EMAIL_REPORTER  | Preparando email para: analistajr@gcatlas.mx
+2025-11-20 12:02:02 | INFO     | -        | EMAIL_REPORTER  | Conectando al servidor SMTP...
+2025-11-20 12:02:04 | INFO     | -        | EMAIL_REPORTER  | Enviando email a: analistajr@gcatlas.mx
+2025-11-20 12:02:05 | INFO     | -        | EMAIL_REPORTER  | ✓ Email enviado exitosamente
+2025-11-20 12:02:05 | INFO     | -        | EMAIL_REPORTER  | ✓ Reporte generado exitosamente: EMAIL_REPORTER
+2025-11-20 12:02:05 | INFO     | -        | MAIN            | ✓ Email enviado a: analistajr@gcatlas.mx
+2025-11-20 12:02:05 | INFO     | -        | MAIN            | ======================================================================
+2025-11-20 12:02:05 | INFO     | -        | MAIN            |   RESUMEN FINAL
+2025-11-20 12:02:05 | INFO     | -        | MAIN            | ======================================================================
+2025-11-20 12:02:05 | INFO     | -        | MAIN            | 📅 Fecha(s): 2025-11-16
+2025-11-20 12:02:05 | INFO     | -        | MAIN            | 📊 Total órdenes: 266
+2025-11-20 12:02:05 | INFO     | -        | MAIN            | ✅ Validaciones OK: 239
+2025-11-20 12:02:05 | INFO     | -        | MAIN            | ⚠️  Con diferencias: 17
+2025-11-20 12:02:05 | INFO     | -        | MAIN            | ❌ No encontradas: 10
+2025-11-20 12:02:05 | INFO     | -        | MAIN            | 📈 Tasa de éxito: 89.8%
+2025-11-20 12:02:05 | INFO     | -        | MAIN            | 📅 Encontradas día siguiente: 13
+2025-11-20 12:02:05 | INFO     | -        | MAIN            | 
+2025-11-20 12:02:05 | INFO     | -        | MAIN            | Por plataforma:
+2025-11-20 12:02:05 | INFO     | -        | MAIN            |   SPRING: 143/158 OK (11 dif, 4 no encontrados)
+2025-11-20 12:02:05 | INFO     | -        | MAIN            |   ATLAS: 96/108 OK (6 dif, 6 no encontrados)
+2025-11-20 12:02:05 | INFO     | -        | MAIN            | 
+2025-11-20 12:02:05 | INFO     | -        | MAIN            | ======================================================================
+2025-11-20 12:02:05 | INFO     | -        | MAIN            | ✅ PROCESO COMPLETADO EXITOSAMENTE
+2025-11-20 12:02:05 | INFO     | -        | MAIN            | ======================================================================
+2025-11-20 12:04:39 | INFO     | -        | SYSTEM          | ======================================================================
+2025-11-20 12:04:39 | INFO     | -        | SYSTEM          | Sistema de Validación Shopify-Intelisis iniciado
+2025-11-20 12:04:39 | INFO     | -        | SYSTEM          | Nivel de logging: INFO
+2025-11-20 12:04:39 | INFO     | -        | SYSTEM          | Directorio de logs: C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\logs
+2025-11-20 12:04:39 | INFO     | -        | SYSTEM          | Plataformas habilitadas: 3
+2025-11-20 12:04:39 | INFO     | -        | SYSTEM          |   - ROOMI (Branch: 442)
+2025-11-20 12:04:39 | INFO     | -        | SYSTEM          |   - SPRING (Branch: 389)
+2025-11-20 12:04:39 | INFO     | -        | SYSTEM          |   - ATLAS (Branch: 98)
+2025-11-20 12:04:39 | INFO     | -        | SYSTEM          | ======================================================================
+2025-11-20 12:04:41 | INFO     | -        | MAIN            | ======================================================================
+2025-11-20 12:04:41 | INFO     | -        | MAIN            | SISTEMA DE VALIDACIÓN SHOPIFY-INTELISIS v2.0
+2025-11-20 12:04:41 | INFO     | -        | MAIN            | ======================================================================
+2025-11-20 12:04:41 | INFO     | ROOMI    | ORDER_FETCHER   | Cliente inicializado para ROOMI
+2025-11-20 12:04:41 | INFO     | SPRING   | ORDER_FETCHER   | Cliente inicializado para SPRING
+2025-11-20 12:04:41 | INFO     | ATLAS    | ORDER_FETCHER   | Cliente inicializado para ATLAS
+2025-11-20 12:04:41 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-20 12:04:41 | INFO     | -        | ORCHESTRATOR    |   INICIO DE VALIDACIÓN SHOPIFY-INTELISIS
+2025-11-20 12:04:41 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-20 12:04:41 | INFO     | -        | ORCHESTRATOR    | Timestamp: 2025-11-20 12:04:41
+2025-11-20 12:04:41 | INFO     | -        | ORCHESTRATOR    | Modo: MANUAL
+2025-11-20 12:04:41 | INFO     | -        | ORCHESTRATOR    | Plataformas habilitadas: 3
+2025-11-20 12:04:41 | INFO     | -        | ORCHESTRATOR    | Estado financiero: paid
+2025-11-20 12:04:41 | INFO     | -        | ORCHESTRATOR    | Tolerancia en totales: $1.0
+2025-11-20 12:04:41 | INFO     | -        | ORCHESTRATOR    | Plataformas:
+2025-11-20 12:04:41 | INFO     | ROOMI    | ORCHESTRATOR    |   - ROOMI (Sucursal: 442)
+2025-11-20 12:04:41 | INFO     | SPRING   | ORCHESTRATOR    |   - SPRING (Sucursal: 389)
+2025-11-20 12:04:41 | INFO     | ATLAS    | ORCHESTRATOR    |   - ATLAS (Sucursal: 98)
+2025-11-20 12:04:41 | INFO     | -        | DATE_UTILS      | Modo MANUAL: 2025-11-16
+2025-11-20 12:04:41 | INFO     | -        | ORCHESTRATOR    | Fechas objetivo: 2025-11-16
+2025-11-20 12:04:41 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-20 12:04:41 | INFO     | -        | ORCHESTRATOR    |   PASO 1: OBTENIENDO ÓRDENES DE SHOPIFY
+2025-11-20 12:04:41 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-20 12:04:41 | INFO     | -        | ORDER_FETCHER   | ======================================================================
+2025-11-20 12:04:41 | INFO     | -        | ORDER_FETCHER   |   OBTENIENDO ÓRDENES DE SHOPIFY
+2025-11-20 12:04:41 | INFO     | -        | ORDER_FETCHER   | ======================================================================
+2025-11-20 12:04:41 | INFO     | -        | ORDER_FETCHER   | Fechas a consultar: 2025-11-16
+2025-11-20 12:04:41 | INFO     | -        | ORDER_FETCHER   | Estado financiero: paid
+2025-11-20 12:04:41 | INFO     | -        | ORDER_FETCHER   | Plataformas: 3
+2025-11-20 12:04:41 | INFO     | -        | ORDER_FETCHER   | ----------------------------------------------------------------------
+2025-11-20 12:04:41 | INFO     | -        | ORDER_FETCHER   |   Consultando fecha: 2025-11-16
+2025-11-20 12:04:41 | INFO     | -        | ORDER_FETCHER   | ----------------------------------------------------------------------
+2025-11-20 12:04:41 | INFO     | ROOMI    | ORDER_FETCHER   | Consultando ROOMI...
+2025-11-20 12:04:41 | INFO     | ROOMI    | SHOPIFY         | Consultando órdenes del 2025-11-16
+2025-11-20 12:04:41 | INFO     | ROOMI    | SHOPIFY         | Total obtenido: 0 órdenes
+2025-11-20 12:04:41 | INFO     | -        | TIMING          | Completado: Shopify: Fetch Orders (⏱️ 0.35s)
+2025-11-20 12:04:41 | INFO     | ROOMI    | ORDER_FETCHER   | ✓ ROOMI: 0 órdenes obtenidas
+2025-11-20 12:04:41 | INFO     | SPRING   | ORDER_FETCHER   | Consultando SPRING...
+2025-11-20 12:04:41 | INFO     | SPRING   | SHOPIFY         | Consultando órdenes del 2025-11-16
+2025-11-20 12:04:42 | INFO     | SPRING   | SHOPIFY         | Página 1: 158 órdenes obtenidas
+2025-11-20 12:04:42 | INFO     | SPRING   | SHOPIFY         | Total obtenido: 158 órdenes
+2025-11-20 12:04:42 | INFO     | -        | TIMING          | Completado: Shopify: Fetch Orders (⏱️ 0.64s)
+2025-11-20 12:04:42 | INFO     | SPRING   | ORDER_FETCHER   | ✓ SPRING: 158 órdenes obtenidas
+2025-11-20 12:04:42 | INFO     | ATLAS    | ORDER_FETCHER   | Consultando ATLAS...
+2025-11-20 12:04:42 | INFO     | ATLAS    | SHOPIFY         | Consultando órdenes del 2025-11-16
+2025-11-20 12:04:43 | INFO     | ATLAS    | SHOPIFY         | Página 1: 108 órdenes obtenidas
+2025-11-20 12:04:43 | INFO     | ATLAS    | SHOPIFY         | Total obtenido: 108 órdenes
+2025-11-20 12:04:43 | INFO     | -        | TIMING          | Completado: Shopify: Fetch Orders (⏱️ 0.56s)
+2025-11-20 12:04:43 | INFO     | ATLAS    | ORDER_FETCHER   | ✓ ATLAS: 108 órdenes obtenidas
+2025-11-20 12:04:43 | INFO     | -        | RAW_DATA_REPORTER | Guardando datos crudos de Shopify: 266 órdenes
+2025-11-20 12:04:43 | INFO     | -        | RAW_DATA_REPORTER | Archivo: consulta_shop_20251116.xlsx
+2025-11-20 12:04:44 | INFO     | -        | RAW_DATA_REPORTER | ✓ Datos guardados: consulta_shop_20251116.xlsx (266 órdenes)
+2025-11-20 12:04:44 | INFO     | -        | ORDER_FETCHER   | ----------------------------------------------------------------------
+2025-11-20 12:04:44 | INFO     | -        | ORDER_FETCHER   |   Resumen de Órdenes Obtenidas
+2025-11-20 12:04:44 | INFO     | -        | ORDER_FETCHER   | ----------------------------------------------------------------------
+2025-11-20 12:04:44 | INFO     | ATLAS    | ORDER_FETCHER   |   ATLAS: 108 órdenes
+2025-11-20 12:04:44 | INFO     | SPRING   | ORDER_FETCHER   |   SPRING: 158 órdenes
+2025-11-20 12:04:44 | INFO     | -        | ORDER_FETCHER   |   TOTAL: 266 órdenes
+2025-11-20 12:04:44 | INFO     | -        | TIMING          | Completado: Fetch All Orders (⏱️ 3.39s)
+2025-11-20 12:04:44 | INFO     | -        | ORCHESTRATOR    | ✓ Total órdenes obtenidas: 266
+2025-11-20 12:04:44 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-20 12:04:44 | INFO     | -        | ORCHESTRATOR    |   PASO 2: VALIDANDO CONTRA INTELISIS
+2025-11-20 12:04:44 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-20 12:04:44 | INFO     | -        | VALIDATOR       | ======================================================================
+2025-11-20 12:04:44 | INFO     | -        | VALIDATOR       |   VALIDANDO ÓRDENES CONTRA INTELISIS
+2025-11-20 12:04:44 | INFO     | -        | VALIDATOR       | ======================================================================
+2025-11-20 12:04:44 | INFO     | -        | VALIDATOR       | Consultando Intelisis para: 2025-11-16
+2025-11-20 12:04:44 | INFO     | -        | INTELISIS       | Consultando Intelisis para el día: 2025-11-16
+2025-11-20 12:04:44 | INFO     | -        | INTELISIS       | Filtrando por sucursales: [98, 389]
+2025-11-20 12:04:55 | INFO     | -        | INTELISIS       | Página 1: 213/10000 registros válidos
+2025-11-20 12:05:06 | INFO     | -        | INTELISIS       | Página 2: 247/10000 registros válidos
+2025-11-20 12:05:09 | INFO     | -        | INTELISIS       | Página 3: 44/641 registros válidos
+2025-11-20 12:05:09 | INFO     | -        | INTELISIS       | Total registros obtenidos: 504
+2025-11-20 12:05:09 | INFO     | -        | INTELISIS       | ----------------------------------------------------------------------
+2025-11-20 12:05:09 | INFO     | -        | INTELISIS       |   Distribución por Sucursal
+2025-11-20 12:05:09 | INFO     | -        | INTELISIS       | ----------------------------------------------------------------------
+2025-11-20 12:05:09 | INFO     | -        | INTELISIS       |   Sucursal 98 (ATLAS): 151 registros
+2025-11-20 12:05:09 | INFO     | -        | INTELISIS       |   Sucursal 389 (SPRING): 353 registros
+2025-11-20 12:05:09 | INFO     | -        | TIMING          | Completado: Intelisis: Fetch Data (⏱️ 24.75s)
+2025-11-20 12:05:09 | INFO     | -        | RAW_DATA_REPORTER | Guardando datos crudos de Intelisis: 504 registros
+2025-11-20 12:05:09 | INFO     | -        | RAW_DATA_REPORTER | Archivo: consulta_intelisis_20251116.xlsx
+2025-11-20 12:05:14 | INFO     | -        | RAW_DATA_REPORTER | ✓ Datos guardados: consulta_intelisis_20251116.xlsx (504 registros)
+2025-11-20 12:05:14 | INFO     | -        | VALIDATOR       | Índice creado: 269 órdenes únicas en Intelisis
+2025-11-20 12:05:14 | WARNING  | SPRING   | VALIDATION      | Order 7004292612205: ⚠ No encontrado en Intelisis
+2025-11-20 12:05:14 | WARNING  | SPRING   | VALIDATION      | Order 7004282781805: ⚠ No encontrado en Intelisis
+2025-11-20 12:05:14 | WARNING  | SPRING   | VALIDATION      | Order 7004272099437: ⚠ No encontrado en Intelisis
+2025-11-20 12:05:14 | WARNING  | SPRING   | VALIDATION      | Order 7004269707373: ⚠ No encontrado en Intelisis
+2025-11-20 12:05:14 | WARNING  | SPRING   | VALIDATION      | Order 7004161081453: ⚠ No encontrado en Intelisis
+2025-11-20 12:05:14 | WARNING  | SPRING   | VALIDATION      | Order 7004136898669: ⚠ Diferencias detectadas
+2025-11-20 12:05:14 | WARNING  | SPRING   | VALIDATION      | Order 7004132474989: ⚠ No encontrado en Intelisis
+2025-11-20 12:05:14 | WARNING  | SPRING   | VALIDATION      | Order 7003880980589: ⚠ No encontrado en Intelisis
+2025-11-20 12:05:14 | WARNING  | SPRING   | VALIDATION      | Order 7003830059117: ⚠ No encontrado en Intelisis
+2025-11-20 12:05:14 | WARNING  | SPRING   | VALIDATION      | Order 7003804369005: ⚠ Diferencias detectadas
+2025-11-20 12:05:14 | WARNING  | SPRING   | VALIDATION      | Order 7003538423917: ⚠ Diferencias detectadas
+2025-11-20 12:05:14 | WARNING  | SPRING   | VALIDATION      | Order 7003429797997: ⚠ No encontrado en Intelisis
+2025-11-20 12:05:14 | WARNING  | SPRING   | VALIDATION      | Order 7003417247853: ⚠ Diferencias detectadas
+2025-11-20 12:05:14 | WARNING  | SPRING   | VALIDATION      | Order 7003290533997: ⚠ No encontrado en Intelisis
+2025-11-20 12:05:14 | WARNING  | SPRING   | VALIDATION      | Order 7002524024941: ⚠ No encontrado en Intelisis
+2025-11-20 12:05:14 | WARNING  | ATLAS    | VALIDATION      | Order 6084665475125: ⚠ No encontrado en Intelisis
+2025-11-20 12:05:14 | WARNING  | ATLAS    | VALIDATION      | Order 6084652204085: ⚠ No encontrado en Intelisis
+2025-11-20 12:05:14 | WARNING  | ATLAS    | VALIDATION      | Order 6084586799157: ⚠ No encontrado en Intelisis
+2025-11-20 12:05:14 | WARNING  | ATLAS    | VALIDATION      | Order 6084576182325: ⚠ No encontrado en Intelisis
+2025-11-20 12:05:14 | WARNING  | ATLAS    | VALIDATION      | Order 6084531847221: ⚠ No encontrado en Intelisis
+2025-11-20 12:05:14 | WARNING  | ATLAS    | VALIDATION      | Order 6084406313013: ⚠ No encontrado en Intelisis
+2025-11-20 12:05:14 | WARNING  | ATLAS    | VALIDATION      | Order 6084360011829: ⚠ No encontrado en Intelisis
+2025-11-20 12:05:14 | WARNING  | ATLAS    | VALIDATION      | Order 6084328947765: ⚠ No encontrado en Intelisis
+2025-11-20 12:05:14 | WARNING  | ATLAS    | VALIDATION      | Order 6084314595381: ⚠ No encontrado en Intelisis
+2025-11-20 12:05:14 | WARNING  | ATLAS    | VALIDATION      | Order 6084244045877: ⚠ No encontrado en Intelisis
+2025-11-20 12:05:14 | WARNING  | ATLAS    | VALIDATION      | Order 6084031152181: ⚠ No encontrado en Intelisis
+2025-11-20 12:05:14 | WARNING  | ATLAS    | VALIDATION      | Order 6083761143861: ⚠ No encontrado en Intelisis
+2025-11-20 12:05:14 | INFO     | -        | VALIDATOR       | ----------------------------------------------------------------------
+2025-11-20 12:05:14 | INFO     | -        | VALIDATOR       |   Buscando 23 órdenes no encontradas en día siguiente
+2025-11-20 12:05:14 | INFO     | -        | VALIDATOR       | ----------------------------------------------------------------------
+2025-11-20 12:05:14 | INFO     | -        | VALIDATOR       | Consultando: 2025-11-17
+2025-11-20 12:05:14 | INFO     | -        | INTELISIS       | Consultando Intelisis para el día: 2025-11-17
+2025-11-20 12:05:14 | INFO     | -        | INTELISIS       | Filtrando por sucursales: [98, 389]
+2025-11-20 12:05:25 | INFO     | -        | INTELISIS       | Página 1: 302/10000 registros válidos
+2025-11-20 12:05:36 | INFO     | -        | INTELISIS       | Página 2: 212/10000 registros válidos
+2025-11-20 12:05:48 | INFO     | -        | INTELISIS       | Página 3: 376/10000 registros válidos
+2025-11-20 12:05:51 | INFO     | -        | INTELISIS       | Página 4: 0/117 registros válidos
+2025-11-20 12:05:51 | INFO     | -        | INTELISIS       | Total registros obtenidos: 890
+2025-11-20 12:05:51 | INFO     | -        | INTELISIS       | ----------------------------------------------------------------------
+2025-11-20 12:05:51 | INFO     | -        | INTELISIS       |   Distribución por Sucursal
+2025-11-20 12:05:51 | INFO     | -        | INTELISIS       | ----------------------------------------------------------------------
+2025-11-20 12:05:51 | INFO     | -        | INTELISIS       |   Sucursal 98 (ATLAS): 252 registros
+2025-11-20 12:05:51 | INFO     | -        | INTELISIS       |   Sucursal 389 (SPRING): 638 registros
+2025-11-20 12:05:51 | INFO     | -        | TIMING          | Completado: Intelisis: Fetch Data (⏱️ 37.19s)
+2025-11-20 12:05:51 | INFO     | -        | VALIDATOR       | Índice creado: 484 órdenes únicas en Intelisis
+2025-11-20 12:05:51 | INFO     | SPRING   | VALIDATOR       | ✓ Orden 7004292612205 encontrada en día siguiente
+2025-11-20 12:05:51 | INFO     | SPRING   | VALIDATOR       | ✓ Orden 7004282781805 encontrada en día siguiente
+2025-11-20 12:05:51 | INFO     | SPRING   | VALIDATOR       | ✓ Orden 7004272099437 encontrada en día siguiente
+2025-11-20 12:05:51 | INFO     | SPRING   | VALIDATOR       | ✓ Orden 7004269707373 encontrada en día siguiente
+2025-11-20 12:05:51 | INFO     | SPRING   | VALIDATOR       | ✓ Orden 7004161081453 encontrada en día siguiente
+2025-11-20 12:05:51 | INFO     | SPRING   | VALIDATOR       | ✓ Orden 7004132474989 encontrada en día siguiente
+2025-11-20 12:05:51 | INFO     | SPRING   | VALIDATOR       | ✓ Orden 7003830059117 encontrada en día siguiente
+2025-11-20 12:05:51 | INFO     | ATLAS    | VALIDATOR       | ✓ Orden 6084665475125 encontrada en día siguiente
+2025-11-20 12:05:51 | INFO     | ATLAS    | VALIDATOR       | ✓ Orden 6084652204085 encontrada en día siguiente
+2025-11-20 12:05:51 | INFO     | ATLAS    | VALIDATOR       | ✓ Orden 6084576182325 encontrada en día siguiente
+2025-11-20 12:05:51 | INFO     | ATLAS    | VALIDATOR       | ✓ Orden 6084328947765 encontrada en día siguiente
+2025-11-20 12:05:51 | INFO     | ATLAS    | VALIDATOR       | ✓ Orden 6084314595381 encontrada en día siguiente
+2025-11-20 12:05:51 | INFO     | ATLAS    | VALIDATOR       | ✓ Orden 6084031152181 encontrada en día siguiente
+2025-11-20 12:05:51 | INFO     | -        | VALIDATOR       | Encontradas 13/23 órdenes en día siguiente
+2025-11-20 12:05:51 | INFO     | -        | VALIDATOR       | ----------------------------------------------------------------------
+2025-11-20 12:05:51 | INFO     | -        | VALIDATOR       |   Resumen de Validación
+2025-11-20 12:05:51 | INFO     | -        | VALIDATOR       | ----------------------------------------------------------------------
+2025-11-20 12:05:51 | INFO     | -        | VALIDATOR       | Total órdenes: 266
+✅ OK: 239
+⚠️ Con diferencias: 17
+❌ No encontrados: 10
+📅 Encontrados día siguiente: 13
+Tasa de éxito: 89.8%
+
+Por plataforma:
+  SPRING: 158 total (143 OK, 11 dif, 4 no encontrados)
+  ATLAS: 108 total (96 OK, 6 dif, 6 no encontrados)
+2025-11-20 12:05:51 | INFO     | -        | TIMING          | Completado: Validate All Orders (⏱️ 66.49s)
+2025-11-20 12:05:51 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-20 12:05:51 | INFO     | -        | ORCHESTRATOR    |   PROCESO COMPLETADO
+2025-11-20 12:05:51 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-20 12:05:51 | INFO     | -        | ORCHESTRATOR    | Total órdenes procesadas: 266
+2025-11-20 12:05:51 | INFO     | -        | ORCHESTRATOR    | ✅ Validaciones OK: 239
+2025-11-20 12:05:51 | INFO     | -        | ORCHESTRATOR    | ⚠️  Con diferencias: 17
+2025-11-20 12:05:51 | INFO     | -        | ORCHESTRATOR    | ❌ No encontradas: 10
+2025-11-20 12:05:51 | INFO     | -        | ORCHESTRATOR    | 📅 Encontradas día siguiente: 13
+2025-11-20 12:05:51 | INFO     | -        | ORCHESTRATOR    | Tasa de éxito: 89.8%
+2025-11-20 12:05:51 | INFO     | -        | ORCHESTRATOR    | ----------------------------------------------------------------------
+2025-11-20 12:05:51 | INFO     | -        | ORCHESTRATOR    |   Detalle por Plataforma
+2025-11-20 12:05:51 | INFO     | -        | ORCHESTRATOR    | ----------------------------------------------------------------------
+2025-11-20 12:05:51 | INFO     | SPRING   | ORCHESTRATOR    | SPRING: 143/158 OK (11 dif, 4 no encontrados)
+2025-11-20 12:05:51 | INFO     | ATLAS    | ORCHESTRATOR    | ATLAS: 96/108 OK (6 dif, 6 no encontrados)
+2025-11-20 12:05:51 | INFO     | -        | ORCHESTRATOR    | ----------------------------------------------------------------------
+2025-11-20 12:05:51 | INFO     | -        | ORCHESTRATOR    |   Archivos de Datos Crudos Generados
+2025-11-20 12:05:51 | INFO     | -        | ORCHESTRATOR    | ----------------------------------------------------------------------
+2025-11-20 12:05:51 | INFO     | -        | ORCHESTRATOR    | 📄 Archivos Shopify generados: 1
+2025-11-20 12:05:51 | WARNING  | -        | ORCHESTRATOR    | No se pudo generar resumen de archivos crudos: name 'Path' is not defined
+2025-11-20 12:05:51 | INFO     | -        | TIMING          | Completado: Complete Validation Process (⏱️ 69.90s)
+2025-11-20 12:05:51 | INFO     | -        | MAIN            | ======================================================================
+2025-11-20 12:05:51 | INFO     | -        | MAIN            |   PASO 3: GENERANDO REPORTES
+2025-11-20 12:05:51 | INFO     | -        | MAIN            | ======================================================================
+2025-11-20 12:05:51 | INFO     | -        | EXCEL_REPORTER  | Iniciando generación de reporte: EXCEL_REPORTER
+2025-11-20 12:05:51 | INFO     | -        | EXCEL_REPORTER  | Creando archivo Excel: C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\output\consulta_validacion.xlsx
+2025-11-20 12:05:51 | INFO     | -        | EXCEL_REPORTER  | Total registros: 266
+2025-11-20 12:05:52 | INFO     | -        | EXCEL_REPORTER  | ✓ Archivo guardado: C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\output\consulta_validacion.xlsx
+2025-11-20 12:05:52 | INFO     | -        | EXCEL_REPORTER  | Tamaño del archivo: 35,406 bytes
+2025-11-20 12:05:52 | INFO     | -        | EXCEL_REPORTER  | ✓ Reporte generado exitosamente: EXCEL_REPORTER
+2025-11-20 12:05:52 | INFO     | -        | MAIN            | ✓ Excel guardado en: C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\output\consulta_validacion.xlsx
+2025-11-20 12:05:52 | INFO     | -        | EMAIL_REPORTER  | Iniciando generación de reporte: EMAIL_REPORTER
+2025-11-20 12:05:52 | INFO     | -        | EMAIL_REPORTER  | Preparando email para: analistajr@gcatlas.mx
+2025-11-20 12:05:52 | INFO     | -        | EMAIL_REPORTER  | Conectando al servidor SMTP...
+2025-11-20 12:05:55 | INFO     | -        | EMAIL_REPORTER  | Enviando email a: analistajr@gcatlas.mx
+2025-11-20 12:05:57 | INFO     | -        | EMAIL_REPORTER  | ✓ Email enviado exitosamente
+2025-11-20 12:05:57 | INFO     | -        | EMAIL_REPORTER  | ✓ Reporte generado exitosamente: EMAIL_REPORTER
+2025-11-20 12:05:57 | INFO     | -        | MAIN            | ✓ Email enviado a: analistajr@gcatlas.mx
+2025-11-20 12:05:57 | INFO     | -        | MAIN            | ======================================================================
+2025-11-20 12:05:57 | INFO     | -        | MAIN            |   RESUMEN FINAL
+2025-11-20 12:05:57 | INFO     | -        | MAIN            | ======================================================================
+2025-11-20 12:05:57 | INFO     | -        | MAIN            | 📅 Fecha(s): 2025-11-16
+2025-11-20 12:05:57 | INFO     | -        | MAIN            | 📊 Total órdenes: 266
+2025-11-20 12:05:57 | INFO     | -        | MAIN            | ✅ Validaciones OK: 239
+2025-11-20 12:05:57 | INFO     | -        | MAIN            | ⚠️  Con diferencias: 17
+2025-11-20 12:05:57 | INFO     | -        | MAIN            | ❌ No encontradas: 10
+2025-11-20 12:05:57 | INFO     | -        | MAIN            | 📈 Tasa de éxito: 89.8%
+2025-11-20 12:05:57 | INFO     | -        | MAIN            | 📅 Encontradas día siguiente: 13
+2025-11-20 12:05:57 | INFO     | -        | MAIN            | 
+2025-11-20 12:05:57 | INFO     | -        | MAIN            | Por plataforma:
+2025-11-20 12:05:57 | INFO     | -        | MAIN            |   SPRING: 143/158 OK (11 dif, 4 no encontrados)
+2025-11-20 12:05:57 | INFO     | -        | MAIN            |   ATLAS: 96/108 OK (6 dif, 6 no encontrados)
+2025-11-20 12:05:57 | INFO     | -        | MAIN            | 
+2025-11-20 12:05:57 | INFO     | -        | MAIN            | ======================================================================
+2025-11-20 12:05:57 | INFO     | -        | MAIN            | ✅ PROCESO COMPLETADO EXITOSAMENTE
+2025-11-20 12:05:57 | INFO     | -        | MAIN            | ======================================================================
+2025-11-20 12:06:20 | INFO     | -        | SYSTEM          | ======================================================================
+2025-11-20 12:06:20 | INFO     | -        | SYSTEM          | Sistema de Validación Shopify-Intelisis iniciado
+2025-11-20 12:06:20 | INFO     | -        | SYSTEM          | Nivel de logging: INFO
+2025-11-20 12:06:20 | INFO     | -        | SYSTEM          | Directorio de logs: C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\logs
+2025-11-20 12:06:20 | INFO     | -        | SYSTEM          | Plataformas habilitadas: 3
+2025-11-20 12:06:20 | INFO     | -        | SYSTEM          |   - ROOMI (Branch: 442)
+2025-11-20 12:06:20 | INFO     | -        | SYSTEM          |   - SPRING (Branch: 389)
+2025-11-20 12:06:20 | INFO     | -        | SYSTEM          |   - ATLAS (Branch: 98)
+2025-11-20 12:06:20 | INFO     | -        | SYSTEM          | ======================================================================
+2025-11-20 12:06:23 | INFO     | -        | MAIN            | ======================================================================
+2025-11-20 12:06:23 | INFO     | -        | MAIN            | SISTEMA DE VALIDACIÓN SHOPIFY-INTELISIS v2.0
+2025-11-20 12:06:23 | INFO     | -        | MAIN            | ======================================================================
+2025-11-20 12:06:23 | INFO     | ROOMI    | ORDER_FETCHER   | Cliente inicializado para ROOMI
+2025-11-20 12:06:23 | INFO     | SPRING   | ORDER_FETCHER   | Cliente inicializado para SPRING
+2025-11-20 12:06:23 | INFO     | ATLAS    | ORDER_FETCHER   | Cliente inicializado para ATLAS
+2025-11-20 12:06:23 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-20 12:06:23 | INFO     | -        | ORCHESTRATOR    |   INICIO DE VALIDACIÓN SHOPIFY-INTELISIS
+2025-11-20 12:06:23 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-20 12:06:23 | INFO     | -        | ORCHESTRATOR    | Timestamp: 2025-11-20 12:06:23
+2025-11-20 12:06:23 | INFO     | -        | ORCHESTRATOR    | Modo: MANUAL
+2025-11-20 12:06:23 | INFO     | -        | ORCHESTRATOR    | Plataformas habilitadas: 3
+2025-11-20 12:06:23 | INFO     | -        | ORCHESTRATOR    | Estado financiero: paid
+2025-11-20 12:06:23 | INFO     | -        | ORCHESTRATOR    | Tolerancia en totales: $1.0
+2025-11-20 12:06:23 | INFO     | -        | ORCHESTRATOR    | Plataformas:
+2025-11-20 12:06:23 | INFO     | ROOMI    | ORCHESTRATOR    |   - ROOMI (Sucursal: 442)
+2025-11-20 12:06:23 | INFO     | SPRING   | ORCHESTRATOR    |   - SPRING (Sucursal: 389)
+2025-11-20 12:06:23 | INFO     | ATLAS    | ORCHESTRATOR    |   - ATLAS (Sucursal: 98)
+2025-11-20 12:06:23 | INFO     | -        | DATE_UTILS      | Modo MANUAL: 2025-11-17
+2025-11-20 12:06:23 | INFO     | -        | ORCHESTRATOR    | Fechas objetivo: 2025-11-17
+2025-11-20 12:06:23 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-20 12:06:23 | INFO     | -        | ORCHESTRATOR    |   PASO 1: OBTENIENDO ÓRDENES DE SHOPIFY
+2025-11-20 12:06:23 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-20 12:06:23 | INFO     | -        | ORDER_FETCHER   | ======================================================================
+2025-11-20 12:06:23 | INFO     | -        | ORDER_FETCHER   |   OBTENIENDO ÓRDENES DE SHOPIFY
+2025-11-20 12:06:23 | INFO     | -        | ORDER_FETCHER   | ======================================================================
+2025-11-20 12:06:23 | INFO     | -        | ORDER_FETCHER   | Fechas a consultar: 2025-11-17
+2025-11-20 12:06:23 | INFO     | -        | ORDER_FETCHER   | Estado financiero: paid
+2025-11-20 12:06:23 | INFO     | -        | ORDER_FETCHER   | Plataformas: 3
+2025-11-20 12:06:23 | INFO     | -        | ORDER_FETCHER   | ----------------------------------------------------------------------
+2025-11-20 12:06:23 | INFO     | -        | ORDER_FETCHER   |   Consultando fecha: 2025-11-17
+2025-11-20 12:06:23 | INFO     | -        | ORDER_FETCHER   | ----------------------------------------------------------------------
+2025-11-20 12:06:23 | INFO     | ROOMI    | ORDER_FETCHER   | Consultando ROOMI...
+2025-11-20 12:06:23 | INFO     | ROOMI    | SHOPIFY         | Consultando órdenes del 2025-11-17
+2025-11-20 12:06:23 | INFO     | ROOMI    | SHOPIFY         | Página 1: 2 órdenes obtenidas
+2025-11-20 12:06:23 | INFO     | ROOMI    | SHOPIFY         | Total obtenido: 2 órdenes
+2025-11-20 12:06:23 | INFO     | -        | TIMING          | Completado: Shopify: Fetch Orders (⏱️ 0.62s)
+2025-11-20 12:06:23 | INFO     | ROOMI    | ORDER_FETCHER   | ✓ ROOMI: 2 órdenes obtenidas
+2025-11-20 12:06:23 | INFO     | SPRING   | ORDER_FETCHER   | Consultando SPRING...
+2025-11-20 12:06:23 | INFO     | SPRING   | SHOPIFY         | Consultando órdenes del 2025-11-17
+2025-11-20 12:06:27 | INFO     | SPRING   | SHOPIFY         | Página 1: 250 órdenes obtenidas
+2025-11-20 12:06:27 | ERROR    | SPRING   | SHOPIFY         | HTTP 400: {"errors":{"financial_status":"financial_status cannot be passed when page_info is present. See https:\/\/shopify.dev\/api\/usage\/pagination-rest for more information.","status":"status cannot be pas
+2025-11-20 12:06:27 | ERROR    | SPRING   | SHOPIFY         | Error obteniendo página: Shopify API Error [SPRING] - Status 400: HTTP 400: {"errors":{"financial_status":"financial_status cannot be passed when page_info is present. See https:\/\/shopify.dev\/api\/usage\/pagination-rest for more information.","status":"status cannot be pas
+Traceback (most recent call last):
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\integrations\shopify_client.py", line 173, in _fetch_orders_page
+    response = self._make_request(
+        method='GET',
+    ...<3 lines>...
+        timeout=30
+    )
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\utils\decorators.py", line 38, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\integrations\base_client.py", line 55, in _make_request
+    self._handle_error_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\integrations\shopify_client.py", line 328, in _handle_error_response
+    raise ShopifyAPIError(
+    ...<3 lines>...
+    )
+src.core.exceptions.ShopifyAPIError: Shopify API Error [SPRING] - Status 400: HTTP 400: {"errors":{"financial_status":"financial_status cannot be passed when page_info is present. See https:\/\/shopify.dev\/api\/usage\/pagination-rest for more information.","status":"status cannot be pas
+2025-11-20 12:06:27 | ERROR    | -        | TIMING          | Falló: Shopify: Fetch Orders después de 3.51s
+Traceback (most recent call last):
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\integrations\shopify_client.py", line 173, in _fetch_orders_page
+    response = self._make_request(
+        method='GET',
+    ...<3 lines>...
+        timeout=30
+    )
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\utils\decorators.py", line 38, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\integrations\base_client.py", line 55, in _make_request
+    self._handle_error_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\integrations\shopify_client.py", line 328, in _handle_error_response
+    raise ShopifyAPIError(
+    ...<3 lines>...
+    )
+src.core.exceptions.ShopifyAPIError: Shopify API Error [SPRING] - Status 400: HTTP 400: {"errors":{"financial_status":"financial_status cannot be passed when page_info is present. See https:\/\/shopify.dev\/api\/usage\/pagination-rest for more information.","status":"status cannot be pas
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\utils\decorators.py", line 85, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\integrations\shopify_client.py", line 83, in get_orders
+    orders_data, next_page_info = self._fetch_orders_page(
+                                  ~~~~~~~~~~~~~~~~~~~~~~~^
+        start_date=start_date,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        page_info=page_info
+        ^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\integrations\shopify_client.py", line 195, in _fetch_orders_page
+    raise ShopifyAPIError(
+    ...<3 lines>...
+    )
+src.core.exceptions.ShopifyAPIError: Shopify API Error [SPRING] - Status 400: Shopify API Error [SPRING] - Status 400: HTTP 400: {"errors":{"financial_status":"financial_status cannot be passed when page_info is present. See https:\/\/shopify.dev\/api\/usage\/pagination-rest for more information.","status":"status cannot be pas
+2025-11-20 12:06:27 | ERROR    | SPRING   | ORDER_FETCHER   | ✗ Error en SPRING: Shopify API Error [SPRING] - Status 400: Shopify API Error [SPRING] - Status 400: HTTP 400: {"errors":{"financial_status":"financial_status cannot be passed when page_info is present. See https:\/\/shopify.dev\/api\/usage\/pagination-rest for more information.","status":"status cannot be pas
+Traceback (most recent call last):
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\integrations\shopify_client.py", line 173, in _fetch_orders_page
+    response = self._make_request(
+        method='GET',
+    ...<3 lines>...
+        timeout=30
+    )
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\utils\decorators.py", line 38, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\integrations\base_client.py", line 55, in _make_request
+    self._handle_error_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\integrations\shopify_client.py", line 328, in _handle_error_response
+    raise ShopifyAPIError(
+    ...<3 lines>...
+    )
+src.core.exceptions.ShopifyAPIError: Shopify API Error [SPRING] - Status 400: HTTP 400: {"errors":{"financial_status":"financial_status cannot be passed when page_info is present. See https:\/\/shopify.dev\/api\/usage\/pagination-rest for more information.","status":"status cannot be pas
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\services\order_fetcher.py", line 114, in _fetch_sequential
+    orders, raw_data = client.get_orders(date, financial_status)
+                       ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\utils\decorators.py", line 85, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\integrations\shopify_client.py", line 83, in get_orders
+    orders_data, next_page_info = self._fetch_orders_page(
+                                  ~~~~~~~~~~~~~~~~~~~~~~~^
+        start_date=start_date,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        page_info=page_info
+        ^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\integrations\shopify_client.py", line 195, in _fetch_orders_page
+    raise ShopifyAPIError(
+    ...<3 lines>...
+    )
+src.core.exceptions.ShopifyAPIError: Shopify API Error [SPRING] - Status 400: Shopify API Error [SPRING] - Status 400: HTTP 400: {"errors":{"financial_status":"financial_status cannot be passed when page_info is present. See https:\/\/shopify.dev\/api\/usage\/pagination-rest for more information.","status":"status cannot be pas
+2025-11-20 12:06:27 | INFO     | ATLAS    | ORDER_FETCHER   | Consultando ATLAS...
+2025-11-20 12:06:27 | INFO     | ATLAS    | SHOPIFY         | Consultando órdenes del 2025-11-17
+2025-11-20 12:06:30 | INFO     | ATLAS    | SHOPIFY         | Página 1: 218 órdenes obtenidas
+2025-11-20 12:06:30 | INFO     | ATLAS    | SHOPIFY         | Total obtenido: 218 órdenes
+2025-11-20 12:06:30 | INFO     | -        | TIMING          | Completado: Shopify: Fetch Orders (⏱️ 2.61s)
+2025-11-20 12:06:30 | INFO     | ATLAS    | ORDER_FETCHER   | ✓ ATLAS: 218 órdenes obtenidas
+2025-11-20 12:06:30 | INFO     | -        | RAW_DATA_REPORTER | Guardando datos crudos de Shopify: 220 órdenes
+2025-11-20 12:06:30 | INFO     | -        | RAW_DATA_REPORTER | Archivo: consulta_shop_20251117.xlsx
+2025-11-20 12:06:31 | INFO     | -        | RAW_DATA_REPORTER | ✓ Datos guardados: consulta_shop_20251117.xlsx (220 órdenes)
+2025-11-20 12:06:31 | INFO     | -        | ORDER_FETCHER   | ----------------------------------------------------------------------
+2025-11-20 12:06:31 | INFO     | -        | ORDER_FETCHER   |   Resumen de Órdenes Obtenidas
+2025-11-20 12:06:31 | INFO     | -        | ORDER_FETCHER   | ----------------------------------------------------------------------
+2025-11-20 12:06:31 | INFO     | ATLAS    | ORDER_FETCHER   |   ATLAS: 218 órdenes
+2025-11-20 12:06:31 | INFO     | ROOMI    | ORDER_FETCHER   |   ROOMI: 2 órdenes
+2025-11-20 12:06:31 | INFO     | -        | ORDER_FETCHER   |   TOTAL: 220 órdenes
+2025-11-20 12:06:31 | INFO     | -        | TIMING          | Completado: Fetch All Orders (⏱️ 8.35s)
+2025-11-20 12:06:31 | INFO     | -        | ORCHESTRATOR    | ✓ Total órdenes obtenidas: 220
+2025-11-20 12:06:31 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-20 12:06:31 | INFO     | -        | ORCHESTRATOR    |   PASO 2: VALIDANDO CONTRA INTELISIS
+2025-11-20 12:06:31 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-20 12:06:31 | INFO     | -        | VALIDATOR       | ======================================================================
+2025-11-20 12:06:31 | INFO     | -        | VALIDATOR       |   VALIDANDO ÓRDENES CONTRA INTELISIS
+2025-11-20 12:06:31 | INFO     | -        | VALIDATOR       | ======================================================================
+2025-11-20 12:06:31 | INFO     | -        | VALIDATOR       | Consultando Intelisis para: 2025-11-17
+2025-11-20 12:06:31 | INFO     | -        | INTELISIS       | Consultando Intelisis para el día: 2025-11-17
+2025-11-20 12:06:31 | INFO     | -        | INTELISIS       | Filtrando por sucursales: [98, 442]
+2025-11-20 12:06:43 | INFO     | -        | INTELISIS       | Página 1: 85/10000 registros válidos
+2025-11-20 12:06:54 | INFO     | -        | INTELISIS       | Página 2: 80/10000 registros válidos
+2025-11-20 12:07:09 | INFO     | -        | INTELISIS       | Página 3: 91/10000 registros válidos
+2025-11-20 12:07:13 | INFO     | -        | INTELISIS       | Página 4: 0/117 registros válidos
+2025-11-20 12:07:13 | INFO     | -        | INTELISIS       | Total registros obtenidos: 256
+2025-11-20 12:07:13 | INFO     | -        | INTELISIS       | ----------------------------------------------------------------------
+2025-11-20 12:07:13 | INFO     | -        | INTELISIS       |   Distribución por Sucursal
+2025-11-20 12:07:13 | INFO     | -        | INTELISIS       | ----------------------------------------------------------------------
+2025-11-20 12:07:13 | INFO     | -        | INTELISIS       |   Sucursal 98 (ATLAS): 252 registros
+2025-11-20 12:07:13 | INFO     | -        | INTELISIS       |   Sucursal 442 (ROOMI): 4 registros
+2025-11-20 12:07:13 | INFO     | -        | TIMING          | Completado: Intelisis: Fetch Data (⏱️ 41.44s)
+2025-11-20 12:07:13 | INFO     | -        | RAW_DATA_REPORTER | Guardando datos crudos de Intelisis: 256 registros
+2025-11-20 12:07:13 | INFO     | -        | RAW_DATA_REPORTER | Archivo: consulta_intelisis_20251117.xlsx
+2025-11-20 12:07:15 | INFO     | -        | RAW_DATA_REPORTER | ✓ Datos guardados: consulta_intelisis_20251117.xlsx (256 registros)
+2025-11-20 12:07:15 | INFO     | -        | VALIDATOR       | Índice creado: 200 órdenes únicas en Intelisis
+2025-11-20 12:07:15 | WARNING  | ATLAS    | VALIDATION      | Order 6086561300533: ⚠ No encontrado en Intelisis
+2025-11-20 12:07:15 | WARNING  | ATLAS    | VALIDATION      | Order 6086561136693: ⚠ No encontrado en Intelisis
+2025-11-20 12:07:15 | WARNING  | ATLAS    | VALIDATION      | Order 6086560251957: ⚠ No encontrado en Intelisis
+2025-11-20 12:07:15 | WARNING  | ATLAS    | VALIDATION      | Order 6086559793205: ⚠ No encontrado en Intelisis
+2025-11-20 12:07:15 | WARNING  | ATLAS    | VALIDATION      | Order 6086558351413: ⚠ No encontrado en Intelisis
+2025-11-20 12:07:15 | WARNING  | ATLAS    | VALIDATION      | Order 6086555861045: ⚠ No encontrado en Intelisis
+2025-11-20 12:07:15 | WARNING  | ATLAS    | VALIDATION      | Order 6086553927733: ⚠ No encontrado en Intelisis
+2025-11-20 12:07:15 | WARNING  | ATLAS    | VALIDATION      | Order 6086545506357: ⚠ No encontrado en Intelisis
+2025-11-20 12:07:15 | WARNING  | ATLAS    | VALIDATION      | Order 6086524600373: ⚠ No encontrado en Intelisis
+2025-11-20 12:07:15 | WARNING  | ATLAS    | VALIDATION      | Order 6086519980085: ⚠ No encontrado en Intelisis
+2025-11-20 12:07:15 | WARNING  | ATLAS    | VALIDATION      | Order 6086479773749: ⚠ No encontrado en Intelisis
+2025-11-20 12:07:15 | WARNING  | ATLAS    | VALIDATION      | Order 6086479642677: ⚠ No encontrado en Intelisis
+2025-11-20 12:07:15 | WARNING  | ATLAS    | VALIDATION      | Order 6086456148021: ⚠ Diferencias detectadas
+2025-11-20 12:07:15 | WARNING  | ATLAS    | VALIDATION      | Order 6086424100917: ⚠ No encontrado en Intelisis
+2025-11-20 12:07:15 | WARNING  | ATLAS    | VALIDATION      | Order 6086409879605: ⚠ No encontrado en Intelisis
+2025-11-20 12:07:15 | WARNING  | ATLAS    | VALIDATION      | Order 6086395625525: ⚠ No encontrado en Intelisis
+2025-11-20 12:07:15 | WARNING  | ATLAS    | VALIDATION      | Order 6086328778805: ⚠ No encontrado en Intelisis
+2025-11-20 12:07:15 | WARNING  | ATLAS    | VALIDATION      | Order 6086267830325: ⚠ No encontrado en Intelisis
+2025-11-20 12:07:15 | WARNING  | ATLAS    | VALIDATION      | Order 6086206160949: ⚠ No encontrado en Intelisis
+2025-11-20 12:07:15 | WARNING  | ATLAS    | VALIDATION      | Order 6086146129973: ⚠ No encontrado en Intelisis
+2025-11-20 12:07:15 | WARNING  | ATLAS    | VALIDATION      | Order 6086122373173: ⚠ No encontrado en Intelisis
+2025-11-20 12:07:15 | WARNING  | ATLAS    | VALIDATION      | Order 6086082560053: ⚠ No encontrado en Intelisis
+2025-11-20 12:07:15 | WARNING  | ATLAS    | VALIDATION      | Order 6086082101301: ⚠ No encontrado en Intelisis
+2025-11-20 12:07:15 | WARNING  | ATLAS    | VALIDATION      | Order 6086045270069: ⚠ Diferencias detectadas
+2025-11-20 12:07:15 | WARNING  | ATLAS    | VALIDATION      | Order 6086033014837: ⚠ No encontrado en Intelisis
+2025-11-20 12:07:15 | WARNING  | ATLAS    | VALIDATION      | Order 6085988155445: ⚠ No encontrado en Intelisis
+2025-11-20 12:07:15 | WARNING  | ATLAS    | VALIDATION      | Order 6085972623413: ⚠ No encontrado en Intelisis
+2025-11-20 12:07:15 | WARNING  | ATLAS    | VALIDATION      | Order 6085967708213: ⚠ No encontrado en Intelisis
+2025-11-20 12:07:15 | WARNING  | ATLAS    | VALIDATION      | Order 6085831295029: ⚠ No encontrado en Intelisis
+2025-11-20 12:07:15 | WARNING  | ATLAS    | VALIDATION      | Order 6085646057525: ⚠ No encontrado en Intelisis
+2025-11-20 12:07:15 | WARNING  | ATLAS    | VALIDATION      | Order 6085140086837: ⚠ No encontrado en Intelisis
+2025-11-20 12:07:15 | WARNING  | ATLAS    | VALIDATION      | Order 6084685168693: ⚠ No encontrado en Intelisis
+2025-11-20 12:07:15 | INFO     | -        | VALIDATOR       | ----------------------------------------------------------------------
+2025-11-20 12:07:15 | INFO     | -        | VALIDATOR       |   Buscando 30 órdenes no encontradas en día siguiente
+2025-11-20 12:07:15 | INFO     | -        | VALIDATOR       | ----------------------------------------------------------------------
+2025-11-20 12:07:15 | INFO     | -        | VALIDATOR       | Consultando: 2025-11-18
+2025-11-20 12:07:15 | INFO     | -        | INTELISIS       | Consultando Intelisis para el día: 2025-11-18
+2025-11-20 12:07:15 | INFO     | -        | INTELISIS       | Filtrando por sucursales: [98, 442]
+2025-11-20 12:07:26 | INFO     | -        | INTELISIS       | Página 1: 34/10000 registros válidos
+2025-11-20 12:07:31 | INFO     | -        | INTELISIS       | Página 2: 15/2990 registros válidos
+2025-11-20 12:07:31 | INFO     | -        | INTELISIS       | Total registros obtenidos: 49
+2025-11-20 12:07:31 | INFO     | -        | INTELISIS       | ----------------------------------------------------------------------
+2025-11-20 12:07:31 | INFO     | -        | INTELISIS       |   Distribución por Sucursal
+2025-11-20 12:07:31 | INFO     | -        | INTELISIS       | ----------------------------------------------------------------------
+2025-11-20 12:07:31 | INFO     | -        | INTELISIS       |   Sucursal 98 (ATLAS): 49 registros
+2025-11-20 12:07:31 | INFO     | -        | TIMING          | Completado: Intelisis: Fetch Data (⏱️ 15.59s)
+2025-11-20 12:07:31 | INFO     | -        | VALIDATOR       | Índice creado: 35 órdenes únicas en Intelisis
+2025-11-20 12:07:31 | INFO     | ATLAS    | VALIDATOR       | ✓ Orden 6086561300533 encontrada en día siguiente
+2025-11-20 12:07:31 | INFO     | ATLAS    | VALIDATOR       | ✓ Orden 6086561136693 encontrada en día siguiente
+2025-11-20 12:07:31 | INFO     | ATLAS    | VALIDATOR       | ✓ Orden 6086560251957 encontrada en día siguiente
+2025-11-20 12:07:31 | INFO     | ATLAS    | VALIDATOR       | ✓ Orden 6086559793205 encontrada en día siguiente
+2025-11-20 12:07:31 | INFO     | ATLAS    | VALIDATOR       | ✓ Orden 6086558351413 encontrada en día siguiente
+2025-11-20 12:07:31 | INFO     | ATLAS    | VALIDATOR       | ✓ Orden 6086555861045 encontrada en día siguiente
+2025-11-20 12:07:31 | INFO     | ATLAS    | VALIDATOR       | ✓ Orden 6086553927733 encontrada en día siguiente
+2025-11-20 12:07:31 | INFO     | ATLAS    | VALIDATOR       | ✓ Orden 6086545506357 encontrada en día siguiente
+2025-11-20 12:07:31 | INFO     | -        | VALIDATOR       | Encontradas 8/30 órdenes en día siguiente
+2025-11-20 12:07:31 | INFO     | -        | VALIDATOR       | ----------------------------------------------------------------------
+2025-11-20 12:07:31 | INFO     | -        | VALIDATOR       |   Resumen de Validación
+2025-11-20 12:07:31 | INFO     | -        | VALIDATOR       | ----------------------------------------------------------------------
+2025-11-20 12:07:31 | INFO     | -        | VALIDATOR       | Total órdenes: 220
+✅ OK: 188
+⚠️ Con diferencias: 10
+❌ No encontrados: 22
+📅 Encontrados día siguiente: 8
+Tasa de éxito: 85.5%
+
+Por plataforma:
+  ROOMI: 2 total (2 OK, 0 dif, 0 no encontrados)
+  ATLAS: 218 total (186 OK, 10 dif, 22 no encontrados)
+2025-11-20 12:07:31 | INFO     | -        | TIMING          | Completado: Validate All Orders (⏱️ 59.66s)
+2025-11-20 12:07:31 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-20 12:07:31 | INFO     | -        | ORCHESTRATOR    |   PROCESO COMPLETADO
+2025-11-20 12:07:31 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-20 12:07:31 | INFO     | -        | ORCHESTRATOR    | Total órdenes procesadas: 220
+2025-11-20 12:07:31 | INFO     | -        | ORCHESTRATOR    | ✅ Validaciones OK: 188
+2025-11-20 12:07:31 | INFO     | -        | ORCHESTRATOR    | ⚠️  Con diferencias: 10
+2025-11-20 12:07:31 | INFO     | -        | ORCHESTRATOR    | ❌ No encontradas: 22
+2025-11-20 12:07:31 | INFO     | -        | ORCHESTRATOR    | 📅 Encontradas día siguiente: 8
+2025-11-20 12:07:31 | INFO     | -        | ORCHESTRATOR    | Tasa de éxito: 85.5%
+2025-11-20 12:07:31 | INFO     | -        | ORCHESTRATOR    | ----------------------------------------------------------------------
+2025-11-20 12:07:31 | INFO     | -        | ORCHESTRATOR    |   Detalle por Plataforma
+2025-11-20 12:07:31 | INFO     | -        | ORCHESTRATOR    | ----------------------------------------------------------------------
+2025-11-20 12:07:31 | INFO     | ROOMI    | ORCHESTRATOR    | ROOMI: 2/2 OK (0 dif, 0 no encontrados)
+2025-11-20 12:07:31 | INFO     | ATLAS    | ORCHESTRATOR    | ATLAS: 186/218 OK (10 dif, 22 no encontrados)
+2025-11-20 12:07:31 | INFO     | -        | ORCHESTRATOR    | ----------------------------------------------------------------------
+2025-11-20 12:07:31 | INFO     | -        | ORCHESTRATOR    |   Archivos de Datos Crudos Generados
+2025-11-20 12:07:31 | INFO     | -        | ORCHESTRATOR    | ----------------------------------------------------------------------
+2025-11-20 12:07:31 | INFO     | -        | ORCHESTRATOR    | 📄 Archivos Shopify generados: 1
+2025-11-20 12:07:31 | WARNING  | -        | ORCHESTRATOR    | No se pudo generar resumen de archivos crudos: name 'Path' is not defined
+2025-11-20 12:07:31 | INFO     | -        | TIMING          | Completado: Complete Validation Process (⏱️ 68.02s)
+2025-11-20 12:07:31 | INFO     | -        | MAIN            | ======================================================================
+2025-11-20 12:07:31 | INFO     | -        | MAIN            |   PASO 3: GENERANDO REPORTES
+2025-11-20 12:07:31 | INFO     | -        | MAIN            | ======================================================================
+2025-11-20 12:07:31 | INFO     | -        | EXCEL_REPORTER  | Iniciando generación de reporte: EXCEL_REPORTER
+2025-11-20 12:07:31 | INFO     | -        | EXCEL_REPORTER  | Creando archivo Excel: C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\output\consulta_validacion.xlsx
+2025-11-20 12:07:31 | INFO     | -        | EXCEL_REPORTER  | Total registros: 220
+2025-11-20 12:07:32 | INFO     | -        | EXCEL_REPORTER  | ✓ Archivo guardado: C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\output\consulta_validacion.xlsx
+2025-11-20 12:07:32 | INFO     | -        | EXCEL_REPORTER  | Tamaño del archivo: 29,965 bytes
+2025-11-20 12:07:32 | INFO     | -        | EXCEL_REPORTER  | ✓ Reporte generado exitosamente: EXCEL_REPORTER
+2025-11-20 12:07:32 | INFO     | -        | MAIN            | ✓ Excel guardado en: C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\output\consulta_validacion.xlsx
+2025-11-20 12:07:32 | INFO     | -        | EMAIL_REPORTER  | Iniciando generación de reporte: EMAIL_REPORTER
+2025-11-20 12:07:32 | INFO     | -        | EMAIL_REPORTER  | Preparando email para: analistajr@gcatlas.mx
+2025-11-20 12:07:32 | INFO     | -        | EMAIL_REPORTER  | Conectando al servidor SMTP...
+2025-11-20 12:07:33 | INFO     | -        | EMAIL_REPORTER  | Enviando email a: analistajr@gcatlas.mx
+2025-11-20 12:07:34 | INFO     | -        | EMAIL_REPORTER  | ✓ Email enviado exitosamente
+2025-11-20 12:07:34 | INFO     | -        | EMAIL_REPORTER  | ✓ Reporte generado exitosamente: EMAIL_REPORTER
+2025-11-20 12:07:34 | INFO     | -        | MAIN            | ✓ Email enviado a: analistajr@gcatlas.mx
+2025-11-20 12:07:34 | INFO     | -        | MAIN            | ======================================================================
+2025-11-20 12:07:34 | INFO     | -        | MAIN            |   RESUMEN FINAL
+2025-11-20 12:07:34 | INFO     | -        | MAIN            | ======================================================================
+2025-11-20 12:07:34 | INFO     | -        | MAIN            | 📅 Fecha(s): 2025-11-17
+2025-11-20 12:07:34 | INFO     | -        | MAIN            | 📊 Total órdenes: 220
+2025-11-20 12:07:34 | INFO     | -        | MAIN            | ✅ Validaciones OK: 188
+2025-11-20 12:07:34 | INFO     | -        | MAIN            | ⚠️  Con diferencias: 10
+2025-11-20 12:07:34 | INFO     | -        | MAIN            | ❌ No encontradas: 22
+2025-11-20 12:07:34 | INFO     | -        | MAIN            | 📈 Tasa de éxito: 85.5%
+2025-11-20 12:07:34 | INFO     | -        | MAIN            | 📅 Encontradas día siguiente: 8
+2025-11-20 12:07:34 | INFO     | -        | MAIN            | 
+2025-11-20 12:07:34 | INFO     | -        | MAIN            | Por plataforma:
+2025-11-20 12:07:34 | INFO     | -        | MAIN            |   ROOMI: 2/2 OK (0 dif, 0 no encontrados)
+2025-11-20 12:07:34 | INFO     | -        | MAIN            |   ATLAS: 186/218 OK (10 dif, 22 no encontrados)
+2025-11-20 12:07:34 | INFO     | -        | MAIN            | 
+2025-11-20 12:07:34 | INFO     | -        | MAIN            | ======================================================================
+2025-11-20 12:07:34 | INFO     | -        | MAIN            | ✅ PROCESO COMPLETADO EXITOSAMENTE
+2025-11-20 12:07:34 | INFO     | -        | MAIN            | ======================================================================
+2025-11-20 18:29:41 | INFO     | -        | SYSTEM          | ======================================================================
+2025-11-20 18:29:41 | INFO     | -        | SYSTEM          | Sistema de Validación Shopify-Intelisis iniciado
+2025-11-20 18:29:41 | INFO     | -        | SYSTEM          | Nivel de logging: INFO
+2025-11-20 18:29:41 | INFO     | -        | SYSTEM          | Directorio de logs: C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\logs
+2025-11-20 18:29:41 | INFO     | -        | SYSTEM          | Plataformas habilitadas: 3
+2025-11-20 18:29:41 | INFO     | -        | SYSTEM          |   - ROOMI (Branch: 442)
+2025-11-20 18:29:41 | INFO     | -        | SYSTEM          |   - SPRING (Branch: 389)
+2025-11-20 18:29:41 | INFO     | -        | SYSTEM          |   - ATLAS (Branch: 98)
+2025-11-20 18:29:41 | INFO     | -        | SYSTEM          | ======================================================================
+2025-11-20 18:29:43 | INFO     | -        | MAIN            | ======================================================================
+2025-11-20 18:29:43 | INFO     | -        | MAIN            | SISTEMA DE VALIDACIÓN SHOPIFY-INTELISIS v2.0
+2025-11-20 18:29:43 | INFO     | -        | MAIN            | ======================================================================
+2025-11-20 18:29:43 | INFO     | ROOMI    | ORDER_FETCHER   | Cliente inicializado para ROOMI
+2025-11-20 18:29:43 | INFO     | SPRING   | ORDER_FETCHER   | Cliente inicializado para SPRING
+2025-11-20 18:29:43 | INFO     | ATLAS    | ORDER_FETCHER   | Cliente inicializado para ATLAS
+2025-11-20 18:29:43 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-20 18:29:43 | INFO     | -        | ORCHESTRATOR    |   INICIO DE VALIDACIÓN SHOPIFY-INTELISIS
+2025-11-20 18:29:43 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-20 18:29:43 | INFO     | -        | ORCHESTRATOR    | Timestamp: 2025-11-20 18:29:43
+2025-11-20 18:29:43 | INFO     | -        | ORCHESTRATOR    | Modo: MANUAL
+2025-11-20 18:29:43 | INFO     | -        | ORCHESTRATOR    | Plataformas habilitadas: 3
+2025-11-20 18:29:43 | INFO     | -        | ORCHESTRATOR    | Estado financiero: paid
+2025-11-20 18:29:43 | INFO     | -        | ORCHESTRATOR    | Tolerancia en totales: $1.0
+2025-11-20 18:29:43 | INFO     | -        | ORCHESTRATOR    | Plataformas:
+2025-11-20 18:29:43 | INFO     | ROOMI    | ORCHESTRATOR    |   - ROOMI (Sucursal: 442)
+2025-11-20 18:29:43 | INFO     | SPRING   | ORCHESTRATOR    |   - SPRING (Sucursal: 389)
+2025-11-20 18:29:43 | INFO     | ATLAS    | ORCHESTRATOR    |   - ATLAS (Sucursal: 98)
+2025-11-20 18:29:43 | INFO     | -        | DATE_UTILS      | Modo MANUAL: 2025-11-17
+2025-11-20 18:29:43 | INFO     | -        | ORCHESTRATOR    | Fechas objetivo: 2025-11-17
+2025-11-20 18:29:43 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-20 18:29:43 | INFO     | -        | ORCHESTRATOR    |   PASO 1: OBTENIENDO ÓRDENES DE SHOPIFY
+2025-11-20 18:29:43 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-20 18:29:43 | INFO     | -        | ORDER_FETCHER   | ======================================================================
+2025-11-20 18:29:43 | INFO     | -        | ORDER_FETCHER   |   OBTENIENDO ÓRDENES DE SHOPIFY
+2025-11-20 18:29:43 | INFO     | -        | ORDER_FETCHER   | ======================================================================
+2025-11-20 18:29:43 | INFO     | -        | ORDER_FETCHER   | Fechas a consultar: 2025-11-17
+2025-11-20 18:29:43 | INFO     | -        | ORDER_FETCHER   | Estado financiero: paid
+2025-11-20 18:29:43 | INFO     | -        | ORDER_FETCHER   | Plataformas: 3
+2025-11-20 18:29:43 | INFO     | -        | ORDER_FETCHER   | ----------------------------------------------------------------------
+2025-11-20 18:29:43 | INFO     | -        | ORDER_FETCHER   |   Consultando fecha: 2025-11-17
+2025-11-20 18:29:43 | INFO     | -        | ORDER_FETCHER   | ----------------------------------------------------------------------
+2025-11-20 18:29:43 | INFO     | ROOMI    | ORDER_FETCHER   | Consultando ROOMI...
+2025-11-20 18:29:43 | INFO     | ROOMI    | SHOPIFY         | Consultando órdenes del 2025-11-17
+2025-11-20 18:29:44 | INFO     | ROOMI    | SHOPIFY         | Página 1: 2 órdenes obtenidas
+2025-11-20 18:29:44 | INFO     | ROOMI    | SHOPIFY         | Total obtenido: 2 órdenes
+2025-11-20 18:29:44 | INFO     | -        | TIMING          | Completado: Shopify: Fetch Orders (⏱️ 0.61s)
+2025-11-20 18:29:44 | INFO     | ROOMI    | ORDER_FETCHER   | ✓ ROOMI: 2 órdenes obtenidas
+2025-11-20 18:29:44 | INFO     | SPRING   | ORDER_FETCHER   | Consultando SPRING...
+2025-11-20 18:29:44 | INFO     | SPRING   | SHOPIFY         | Consultando órdenes del 2025-11-17
+2025-11-20 18:29:46 | INFO     | SPRING   | SHOPIFY         | Página 1: 250 órdenes obtenidas
+2025-11-20 18:29:46 | ERROR    | SPRING   | SHOPIFY         | HTTP 400: {"errors":{"financial_status":"financial_status cannot be passed when page_info is present. See https:\/\/shopify.dev\/api\/usage\/pagination-rest for more information.","status":"status cannot be pas
+2025-11-20 18:29:46 | ERROR    | SPRING   | SHOPIFY         | Error obteniendo página: Shopify API Error [SPRING] - Status 400: HTTP 400: {"errors":{"financial_status":"financial_status cannot be passed when page_info is present. See https:\/\/shopify.dev\/api\/usage\/pagination-rest for more information.","status":"status cannot be pas
+Traceback (most recent call last):
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\integrations\shopify_client.py", line 173, in _fetch_orders_page
+    response = self._make_request(
+        method='GET',
+    ...<3 lines>...
+        timeout=30
+    )
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\utils\decorators.py", line 38, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\integrations\base_client.py", line 55, in _make_request
+    self._handle_error_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\integrations\shopify_client.py", line 328, in _handle_error_response
+    raise ShopifyAPIError(
+    ...<3 lines>...
+    )
+src.core.exceptions.ShopifyAPIError: Shopify API Error [SPRING] - Status 400: HTTP 400: {"errors":{"financial_status":"financial_status cannot be passed when page_info is present. See https:\/\/shopify.dev\/api\/usage\/pagination-rest for more information.","status":"status cannot be pas
+2025-11-20 18:29:46 | ERROR    | -        | TIMING          | Falló: Shopify: Fetch Orders después de 2.33s
+Traceback (most recent call last):
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\integrations\shopify_client.py", line 173, in _fetch_orders_page
+    response = self._make_request(
+        method='GET',
+    ...<3 lines>...
+        timeout=30
+    )
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\utils\decorators.py", line 38, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\integrations\base_client.py", line 55, in _make_request
+    self._handle_error_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\integrations\shopify_client.py", line 328, in _handle_error_response
+    raise ShopifyAPIError(
+    ...<3 lines>...
+    )
+src.core.exceptions.ShopifyAPIError: Shopify API Error [SPRING] - Status 400: HTTP 400: {"errors":{"financial_status":"financial_status cannot be passed when page_info is present. See https:\/\/shopify.dev\/api\/usage\/pagination-rest for more information.","status":"status cannot be pas
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\utils\decorators.py", line 85, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\integrations\shopify_client.py", line 83, in get_orders
+    orders_data, next_page_info = self._fetch_orders_page(
+                                  ~~~~~~~~~~~~~~~~~~~~~~~^
+        start_date=start_date,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        page_info=page_info
+        ^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\integrations\shopify_client.py", line 195, in _fetch_orders_page
+    raise ShopifyAPIError(
+    ...<3 lines>...
+    )
+src.core.exceptions.ShopifyAPIError: Shopify API Error [SPRING] - Status 400: Shopify API Error [SPRING] - Status 400: HTTP 400: {"errors":{"financial_status":"financial_status cannot be passed when page_info is present. See https:\/\/shopify.dev\/api\/usage\/pagination-rest for more information.","status":"status cannot be pas
+2025-11-20 18:29:46 | ERROR    | SPRING   | ORDER_FETCHER   | ✗ Error en SPRING: Shopify API Error [SPRING] - Status 400: Shopify API Error [SPRING] - Status 400: HTTP 400: {"errors":{"financial_status":"financial_status cannot be passed when page_info is present. See https:\/\/shopify.dev\/api\/usage\/pagination-rest for more information.","status":"status cannot be pas
+Traceback (most recent call last):
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\integrations\shopify_client.py", line 173, in _fetch_orders_page
+    response = self._make_request(
+        method='GET',
+    ...<3 lines>...
+        timeout=30
+    )
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\utils\decorators.py", line 38, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\integrations\base_client.py", line 55, in _make_request
+    self._handle_error_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\integrations\shopify_client.py", line 328, in _handle_error_response
+    raise ShopifyAPIError(
+    ...<3 lines>...
+    )
+src.core.exceptions.ShopifyAPIError: Shopify API Error [SPRING] - Status 400: HTTP 400: {"errors":{"financial_status":"financial_status cannot be passed when page_info is present. See https:\/\/shopify.dev\/api\/usage\/pagination-rest for more information.","status":"status cannot be pas
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\services\order_fetcher.py", line 114, in _fetch_sequential
+    orders, raw_data = client.get_orders(date, financial_status)
+                       ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\utils\decorators.py", line 85, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\integrations\shopify_client.py", line 83, in get_orders
+    orders_data, next_page_info = self._fetch_orders_page(
+                                  ~~~~~~~~~~~~~~~~~~~~~~~^
+        start_date=start_date,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        page_info=page_info
+        ^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\src\integrations\shopify_client.py", line 195, in _fetch_orders_page
+    raise ShopifyAPIError(
+    ...<3 lines>...
+    )
+src.core.exceptions.ShopifyAPIError: Shopify API Error [SPRING] - Status 400: Shopify API Error [SPRING] - Status 400: HTTP 400: {"errors":{"financial_status":"financial_status cannot be passed when page_info is present. See https:\/\/shopify.dev\/api\/usage\/pagination-rest for more information.","status":"status cannot be pas
+2025-11-20 18:29:46 | INFO     | ATLAS    | ORDER_FETCHER   | Consultando ATLAS...
+2025-11-20 18:29:46 | INFO     | ATLAS    | SHOPIFY         | Consultando órdenes del 2025-11-17
+2025-11-20 18:29:48 | INFO     | ATLAS    | SHOPIFY         | Página 1: 218 órdenes obtenidas
+2025-11-20 18:29:48 | INFO     | ATLAS    | SHOPIFY         | Total obtenido: 218 órdenes
+2025-11-20 18:29:48 | INFO     | -        | TIMING          | Completado: Shopify: Fetch Orders (⏱️ 2.00s)
+2025-11-20 18:29:48 | INFO     | ATLAS    | ORDER_FETCHER   | ✓ ATLAS: 218 órdenes obtenidas
+2025-11-20 18:29:48 | INFO     | -        | RAW_DATA_REPORTER | Guardando datos crudos de Shopify: 220 órdenes
+2025-11-20 18:29:48 | INFO     | -        | RAW_DATA_REPORTER | Archivo: consulta_shop_20251117.xlsx
+2025-11-20 18:29:50 | INFO     | -        | RAW_DATA_REPORTER | ✓ Datos guardados: consulta_shop_20251117.xlsx (220 órdenes)
+2025-11-20 18:29:50 | INFO     | -        | ORDER_FETCHER   | ----------------------------------------------------------------------
+2025-11-20 18:29:50 | INFO     | -        | ORDER_FETCHER   |   Resumen de Órdenes Obtenidas
+2025-11-20 18:29:50 | INFO     | -        | ORDER_FETCHER   | ----------------------------------------------------------------------
+2025-11-20 18:29:50 | INFO     | ATLAS    | ORDER_FETCHER   |   ATLAS: 218 órdenes
+2025-11-20 18:29:50 | INFO     | ROOMI    | ORDER_FETCHER   |   ROOMI: 2 órdenes
+2025-11-20 18:29:50 | INFO     | -        | ORDER_FETCHER   |   TOTAL: 220 órdenes
+2025-11-20 18:29:50 | INFO     | -        | TIMING          | Completado: Fetch All Orders (⏱️ 6.55s)
+2025-11-20 18:29:50 | INFO     | -        | ORCHESTRATOR    | ✓ Total órdenes obtenidas: 220
+2025-11-20 18:29:50 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-20 18:29:50 | INFO     | -        | ORCHESTRATOR    |   PASO 2: VALIDANDO CONTRA INTELISIS
+2025-11-20 18:29:50 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-20 18:29:50 | INFO     | -        | VALIDATOR       | ======================================================================
+2025-11-20 18:29:50 | INFO     | -        | VALIDATOR       |   VALIDANDO ÓRDENES CONTRA INTELISIS
+2025-11-20 18:29:50 | INFO     | -        | VALIDATOR       | ======================================================================
+2025-11-20 18:29:50 | INFO     | -        | VALIDATOR       | Consultando Intelisis para: 2025-11-17
+2025-11-20 18:29:50 | INFO     | -        | INTELISIS       | Consultando Intelisis para el día: 2025-11-17
+2025-11-20 18:29:50 | INFO     | -        | INTELISIS       | Filtrando por sucursales: [442, 98]
+2025-11-20 18:30:02 | INFO     | -        | INTELISIS       | Página 1: 85/10000 registros válidos
+2025-11-20 18:30:13 | INFO     | -        | INTELISIS       | Página 2: 80/10000 registros válidos
+2025-11-20 18:30:24 | INFO     | -        | INTELISIS       | Página 3: 91/10000 registros válidos
+2025-11-20 18:30:28 | INFO     | -        | INTELISIS       | Página 4: 0/121 registros válidos
+2025-11-20 18:30:28 | INFO     | -        | INTELISIS       | Total registros obtenidos: 256
+2025-11-20 18:30:28 | INFO     | -        | INTELISIS       | ----------------------------------------------------------------------
+2025-11-20 18:30:28 | INFO     | -        | INTELISIS       |   Distribución por Sucursal
+2025-11-20 18:30:28 | INFO     | -        | INTELISIS       | ----------------------------------------------------------------------
+2025-11-20 18:30:28 | INFO     | -        | INTELISIS       |   Sucursal 98 (ATLAS): 252 registros
+2025-11-20 18:30:28 | INFO     | -        | INTELISIS       |   Sucursal 442 (ROOMI): 4 registros
+2025-11-20 18:30:28 | INFO     | -        | TIMING          | Completado: Intelisis: Fetch Data (⏱️ 37.66s)
+2025-11-20 18:30:28 | INFO     | -        | RAW_DATA_REPORTER | Guardando datos crudos de Intelisis: 256 registros
+2025-11-20 18:30:28 | INFO     | -        | RAW_DATA_REPORTER | Archivo: consulta_intelisis_20251117.xlsx
+2025-11-20 18:30:30 | INFO     | -        | RAW_DATA_REPORTER | ✓ Datos guardados: consulta_intelisis_20251117.xlsx (256 registros)
+2025-11-20 18:30:30 | INFO     | -        | VALIDATOR       | Índice creado: 200 órdenes únicas en Intelisis
+2025-11-20 18:30:30 | WARNING  | ATLAS    | VALIDATION      | Order 6086561300533: ⚠ No encontrado en Intelisis
+2025-11-20 18:30:30 | WARNING  | ATLAS    | VALIDATION      | Order 6086561136693: ⚠ No encontrado en Intelisis
+2025-11-20 18:30:30 | WARNING  | ATLAS    | VALIDATION      | Order 6086560251957: ⚠ No encontrado en Intelisis
+2025-11-20 18:30:30 | WARNING  | ATLAS    | VALIDATION      | Order 6086559793205: ⚠ No encontrado en Intelisis
+2025-11-20 18:30:30 | WARNING  | ATLAS    | VALIDATION      | Order 6086558351413: ⚠ No encontrado en Intelisis
+2025-11-20 18:30:30 | WARNING  | ATLAS    | VALIDATION      | Order 6086555861045: ⚠ No encontrado en Intelisis
+2025-11-20 18:30:30 | WARNING  | ATLAS    | VALIDATION      | Order 6086553927733: ⚠ No encontrado en Intelisis
+2025-11-20 18:30:30 | WARNING  | ATLAS    | VALIDATION      | Order 6086545506357: ⚠ No encontrado en Intelisis
+2025-11-20 18:30:30 | WARNING  | ATLAS    | VALIDATION      | Order 6086524600373: ⚠ No encontrado en Intelisis
+2025-11-20 18:30:30 | WARNING  | ATLAS    | VALIDATION      | Order 6086519980085: ⚠ No encontrado en Intelisis
+2025-11-20 18:30:30 | WARNING  | ATLAS    | VALIDATION      | Order 6086479773749: ⚠ No encontrado en Intelisis
+2025-11-20 18:30:30 | WARNING  | ATLAS    | VALIDATION      | Order 6086479642677: ⚠ No encontrado en Intelisis
+2025-11-20 18:30:30 | WARNING  | ATLAS    | VALIDATION      | Order 6086456148021: ⚠ Diferencias detectadas
+2025-11-20 18:30:30 | WARNING  | ATLAS    | VALIDATION      | Order 6086424100917: ⚠ No encontrado en Intelisis
+2025-11-20 18:30:30 | WARNING  | ATLAS    | VALIDATION      | Order 6086409879605: ⚠ No encontrado en Intelisis
+2025-11-20 18:30:30 | WARNING  | ATLAS    | VALIDATION      | Order 6086395625525: ⚠ No encontrado en Intelisis
+2025-11-20 18:30:30 | WARNING  | ATLAS    | VALIDATION      | Order 6086328778805: ⚠ No encontrado en Intelisis
+2025-11-20 18:30:30 | WARNING  | ATLAS    | VALIDATION      | Order 6086267830325: ⚠ No encontrado en Intelisis
+2025-11-20 18:30:30 | WARNING  | ATLAS    | VALIDATION      | Order 6086206160949: ⚠ No encontrado en Intelisis
+2025-11-20 18:30:30 | WARNING  | ATLAS    | VALIDATION      | Order 6086146129973: ⚠ No encontrado en Intelisis
+2025-11-20 18:30:30 | WARNING  | ATLAS    | VALIDATION      | Order 6086122373173: ⚠ No encontrado en Intelisis
+2025-11-20 18:30:30 | WARNING  | ATLAS    | VALIDATION      | Order 6086082560053: ⚠ No encontrado en Intelisis
+2025-11-20 18:30:30 | WARNING  | ATLAS    | VALIDATION      | Order 6086082101301: ⚠ No encontrado en Intelisis
+2025-11-20 18:30:30 | WARNING  | ATLAS    | VALIDATION      | Order 6086045270069: ⚠ Diferencias detectadas
+2025-11-20 18:30:30 | WARNING  | ATLAS    | VALIDATION      | Order 6086033014837: ⚠ No encontrado en Intelisis
+2025-11-20 18:30:30 | WARNING  | ATLAS    | VALIDATION      | Order 6085988155445: ⚠ No encontrado en Intelisis
+2025-11-20 18:30:30 | WARNING  | ATLAS    | VALIDATION      | Order 6085972623413: ⚠ No encontrado en Intelisis
+2025-11-20 18:30:30 | WARNING  | ATLAS    | VALIDATION      | Order 6085967708213: ⚠ No encontrado en Intelisis
+2025-11-20 18:30:30 | WARNING  | ATLAS    | VALIDATION      | Order 6085831295029: ⚠ No encontrado en Intelisis
+2025-11-20 18:30:30 | WARNING  | ATLAS    | VALIDATION      | Order 6085646057525: ⚠ No encontrado en Intelisis
+2025-11-20 18:30:30 | WARNING  | ATLAS    | VALIDATION      | Order 6085140086837: ⚠ No encontrado en Intelisis
+2025-11-20 18:30:30 | WARNING  | ATLAS    | VALIDATION      | Order 6084685168693: ⚠ No encontrado en Intelisis
+2025-11-20 18:30:30 | INFO     | -        | VALIDATOR       | ----------------------------------------------------------------------
+2025-11-20 18:30:30 | INFO     | -        | VALIDATOR       |   Buscando 30 órdenes no encontradas hasta 5 días posteriores
+2025-11-20 18:30:30 | INFO     | -        | VALIDATOR       | ----------------------------------------------------------------------
+2025-11-20 18:30:30 | INFO     | -        | VALIDATOR       | Fechas a consultar: 2025-11-18, 2025-11-19, 2025-11-20, 2025-11-21, 2025-11-22
+2025-11-20 18:30:30 | INFO     | -        | VALIDATOR       | Consultando datos Intelisis para 2025-11-18…
+2025-11-20 18:30:30 | INFO     | -        | INTELISIS       | Consultando Intelisis para el día: 2025-11-18
+2025-11-20 18:30:30 | INFO     | -        | INTELISIS       | Filtrando por sucursales: [442, 98]
+2025-11-20 18:30:40 | INFO     | -        | INTELISIS       | Página 1: 34/10000 registros válidos
+2025-11-20 18:30:45 | INFO     | -        | INTELISIS       | Página 2: 15/2992 registros válidos
+2025-11-20 18:30:45 | INFO     | -        | INTELISIS       | Total registros obtenidos: 49
+2025-11-20 18:30:45 | INFO     | -        | INTELISIS       | ----------------------------------------------------------------------
+2025-11-20 18:30:45 | INFO     | -        | INTELISIS       |   Distribución por Sucursal
+2025-11-20 18:30:45 | INFO     | -        | INTELISIS       | ----------------------------------------------------------------------
+2025-11-20 18:30:45 | INFO     | -        | INTELISIS       |   Sucursal 98 (ATLAS): 49 registros
+2025-11-20 18:30:45 | INFO     | -        | TIMING          | Completado: Intelisis: Fetch Data (⏱️ 15.04s)
+2025-11-20 18:30:45 | INFO     | -        | VALIDATOR       | Índice creado: 35 órdenes únicas en Intelisis
+2025-11-20 18:30:45 | INFO     | ATLAS    | VALIDATOR       | ✓ Orden 6086561300533 encontrada en Intelisis del día 2025-11-18
+2025-11-20 18:30:45 | INFO     | ATLAS    | VALIDATOR       | ✓ Orden 6086561136693 encontrada en Intelisis del día 2025-11-18
+2025-11-20 18:30:45 | INFO     | ATLAS    | VALIDATOR       | ✓ Orden 6086560251957 encontrada en Intelisis del día 2025-11-18
+2025-11-20 18:30:45 | INFO     | ATLAS    | VALIDATOR       | ✓ Orden 6086559793205 encontrada en Intelisis del día 2025-11-18
+2025-11-20 18:30:45 | INFO     | ATLAS    | VALIDATOR       | ✓ Orden 6086558351413 encontrada en Intelisis del día 2025-11-18
+2025-11-20 18:30:45 | INFO     | ATLAS    | VALIDATOR       | ✓ Orden 6086555861045 encontrada en Intelisis del día 2025-11-18
+2025-11-20 18:30:45 | INFO     | ATLAS    | VALIDATOR       | ✓ Orden 6086553927733 encontrada en Intelisis del día 2025-11-18
+2025-11-20 18:30:45 | INFO     | ATLAS    | VALIDATOR       | ✓ Orden 6086545506357 encontrada en Intelisis del día 2025-11-18
+2025-11-20 18:30:45 | INFO     | -        | VALIDATOR       | Consultando datos Intelisis para 2025-11-19…
+2025-11-20 18:30:45 | INFO     | -        | INTELISIS       | Consultando Intelisis para el día: 2025-11-19
+2025-11-20 18:30:45 | INFO     | -        | INTELISIS       | Filtrando por sucursales: [442, 98]
+2025-11-20 18:30:55 | INFO     | -        | INTELISIS       | Página 1: 30/9192 registros válidos
+2025-11-20 18:30:55 | INFO     | -        | INTELISIS       | Total registros obtenidos: 30
+2025-11-20 18:30:55 | INFO     | -        | INTELISIS       | ----------------------------------------------------------------------
+2025-11-20 18:30:55 | INFO     | -        | INTELISIS       |   Distribución por Sucursal
+2025-11-20 18:30:55 | INFO     | -        | INTELISIS       | ----------------------------------------------------------------------
+2025-11-20 18:30:55 | INFO     | -        | INTELISIS       |   Sucursal 98 (ATLAS): 30 registros
+2025-11-20 18:30:55 | INFO     | -        | TIMING          | Completado: Intelisis: Fetch Data (⏱️ 9.75s)
+2025-11-20 18:30:55 | INFO     | -        | VALIDATOR       | Índice creado: 23 órdenes únicas en Intelisis
+2025-11-20 18:30:55 | INFO     | ATLAS    | VALIDATOR       | ✓ Orden 6086524600373 encontrada en Intelisis del día 2025-11-19
+2025-11-20 18:30:55 | INFO     | ATLAS    | VALIDATOR       | ✓ Orden 6085972623413 encontrada en Intelisis del día 2025-11-19
+2025-11-20 18:30:55 | INFO     | ATLAS    | VALIDATOR       | ✓ Orden 6085831295029 encontrada en Intelisis del día 2025-11-19
+2025-11-20 18:30:55 | INFO     | ATLAS    | VALIDATOR       | ✓ Orden 6085646057525 encontrada en Intelisis del día 2025-11-19
+2025-11-20 18:30:55 | INFO     | -        | VALIDATOR       | Consultando datos Intelisis para 2025-11-20…
+2025-11-20 18:30:55 | INFO     | -        | INTELISIS       | Consultando Intelisis para el día: 2025-11-20
+2025-11-20 18:30:55 | INFO     | -        | INTELISIS       | Filtrando por sucursales: [442, 98]
+2025-11-20 18:31:00 | INFO     | -        | INTELISIS       | Página 1: 25/4873 registros válidos
+2025-11-20 18:31:00 | INFO     | -        | INTELISIS       | Total registros obtenidos: 25
+2025-11-20 18:31:00 | INFO     | -        | INTELISIS       | ----------------------------------------------------------------------
+2025-11-20 18:31:00 | INFO     | -        | INTELISIS       |   Distribución por Sucursal
+2025-11-20 18:31:00 | INFO     | -        | INTELISIS       | ----------------------------------------------------------------------
+2025-11-20 18:31:00 | INFO     | -        | INTELISIS       |   Sucursal 98 (ATLAS): 25 registros
+2025-11-20 18:31:00 | INFO     | -        | TIMING          | Completado: Intelisis: Fetch Data (⏱️ 5.72s)
+2025-11-20 18:31:00 | INFO     | -        | VALIDATOR       | Índice creado: 16 órdenes únicas en Intelisis
+2025-11-20 18:31:00 | INFO     | ATLAS    | VALIDATOR       | ✓ Orden 6086479773749 encontrada en Intelisis del día 2025-11-20
+2025-11-20 18:31:00 | INFO     | ATLAS    | VALIDATOR       | ✓ Orden 6086395625525 encontrada en Intelisis del día 2025-11-20
+2025-11-20 18:31:00 | INFO     | ATLAS    | VALIDATOR       | ✓ Orden 6086267830325 encontrada en Intelisis del día 2025-11-20
+2025-11-20 18:31:00 | INFO     | ATLAS    | VALIDATOR       | ✓ Orden 6086206160949 encontrada en Intelisis del día 2025-11-20
+2025-11-20 18:31:00 | INFO     | ATLAS    | VALIDATOR       | ✓ Orden 6086146129973 encontrada en Intelisis del día 2025-11-20
+2025-11-20 18:31:00 | INFO     | ATLAS    | VALIDATOR       | ✓ Orden 6086122373173 encontrada en Intelisis del día 2025-11-20
+2025-11-20 18:31:00 | INFO     | ATLAS    | VALIDATOR       | ✓ Orden 6086082560053 encontrada en Intelisis del día 2025-11-20
+2025-11-20 18:31:00 | INFO     | ATLAS    | VALIDATOR       | ✓ Orden 6086082101301 encontrada en Intelisis del día 2025-11-20
+2025-11-20 18:31:00 | INFO     | -        | VALIDATOR       | Consultando datos Intelisis para 2025-11-21…
+2025-11-20 18:31:00 | INFO     | -        | INTELISIS       | Consultando Intelisis para el día: 2025-11-21
+2025-11-20 18:31:00 | INFO     | -        | INTELISIS       | Filtrando por sucursales: [442, 98]
+2025-11-20 18:31:01 | INFO     | -        | INTELISIS       | Total registros obtenidos: 0
+2025-11-20 18:31:01 | INFO     | -        | TIMING          | Completado: Intelisis: Fetch Data (⏱️ 0.55s)
+2025-11-20 18:31:01 | INFO     | -        | VALIDATOR       | Sin datos en 2025-11-21
+2025-11-20 18:31:01 | INFO     | -        | VALIDATOR       | Consultando datos Intelisis para 2025-11-22…
+2025-11-20 18:31:01 | INFO     | -        | INTELISIS       | Consultando Intelisis para el día: 2025-11-22
+2025-11-20 18:31:01 | INFO     | -        | INTELISIS       | Filtrando por sucursales: [442, 98]
+2025-11-20 18:31:02 | INFO     | -        | INTELISIS       | Total registros obtenidos: 0
+2025-11-20 18:31:02 | INFO     | -        | TIMING          | Completado: Intelisis: Fetch Data (⏱️ 0.53s)
+2025-11-20 18:31:02 | INFO     | -        | VALIDATOR       | Sin datos en 2025-11-22
+2025-11-20 18:31:02 | INFO     | -        | VALIDATOR       | ----------------------------------------------------------------------
+2025-11-20 18:31:02 | INFO     | -        | VALIDATOR       |   Resumen de Validación
+2025-11-20 18:31:02 | INFO     | -        | VALIDATOR       | ----------------------------------------------------------------------
+2025-11-20 18:31:02 | INFO     | -        | VALIDATOR       | Total órdenes: 220
+✅ OK: 188
+⚠️ Con diferencias: 22
+❌ No encontrados: 10
+📅 Encontrados día siguiente: 20
+Tasa de éxito: 85.5%
+
+Por plataforma:
+  ROOMI: 2 total (2 OK, 0 dif, 0 no encontrados)
+  ATLAS: 218 total (186 OK, 22 dif, 10 no encontrados)
+2025-11-20 18:31:02 | INFO     | -        | TIMING          | Completado: Validate All Orders (⏱️ 71.63s)
+2025-11-20 18:31:02 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-20 18:31:02 | INFO     | -        | ORCHESTRATOR    |   PROCESO COMPLETADO
+2025-11-20 18:31:02 | INFO     | -        | ORCHESTRATOR    | ======================================================================
+2025-11-20 18:31:02 | INFO     | -        | ORCHESTRATOR    | Total órdenes procesadas: 220
+2025-11-20 18:31:02 | INFO     | -        | ORCHESTRATOR    | ✅ Validaciones OK: 188
+2025-11-20 18:31:02 | INFO     | -        | ORCHESTRATOR    | ⚠️  Con diferencias: 22
+2025-11-20 18:31:02 | INFO     | -        | ORCHESTRATOR    | ❌ No encontradas: 10
+2025-11-20 18:31:02 | INFO     | -        | ORCHESTRATOR    | 📅 Encontradas día siguiente: 20
+2025-11-20 18:31:02 | INFO     | -        | ORCHESTRATOR    | Tasa de éxito: 85.5%
+2025-11-20 18:31:02 | INFO     | -        | ORCHESTRATOR    | ----------------------------------------------------------------------
+2025-11-20 18:31:02 | INFO     | -        | ORCHESTRATOR    |   Detalle por Plataforma
+2025-11-20 18:31:02 | INFO     | -        | ORCHESTRATOR    | ----------------------------------------------------------------------
+2025-11-20 18:31:02 | INFO     | ROOMI    | ORCHESTRATOR    | ROOMI: 2/2 OK (0 dif, 0 no encontrados)
+2025-11-20 18:31:02 | INFO     | ATLAS    | ORCHESTRATOR    | ATLAS: 186/218 OK (22 dif, 10 no encontrados)
+2025-11-20 18:31:02 | INFO     | -        | ORCHESTRATOR    | ----------------------------------------------------------------------
+2025-11-20 18:31:02 | INFO     | -        | ORCHESTRATOR    |   Archivos de Datos Crudos Generados
+2025-11-20 18:31:02 | INFO     | -        | ORCHESTRATOR    | ----------------------------------------------------------------------
+2025-11-20 18:31:02 | INFO     | -        | ORCHESTRATOR    | 📄 Archivos Shopify generados: 1
+2025-11-20 18:31:02 | WARNING  | -        | ORCHESTRATOR    | No se pudo generar resumen de archivos crudos: name 'Path' is not defined
+2025-11-20 18:31:02 | INFO     | -        | TIMING          | Completado: Complete Validation Process (⏱️ 78.19s)
+2025-11-20 18:31:02 | INFO     | -        | MAIN            | ======================================================================
+2025-11-20 18:31:02 | INFO     | -        | MAIN            |   PASO 3: GENERANDO REPORTES
+2025-11-20 18:31:02 | INFO     | -        | MAIN            | ======================================================================
+2025-11-20 18:31:02 | INFO     | -        | EXCEL_REPORTER  | Iniciando generación de reporte: EXCEL_REPORTER
+2025-11-20 18:31:02 | INFO     | -        | EXCEL_REPORTER  | Creando archivo Excel: C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\output\consulta_validacion.xlsx
+2025-11-20 18:31:02 | INFO     | -        | EXCEL_REPORTER  | Total registros: 220
+2025-11-20 18:31:02 | INFO     | -        | EXCEL_REPORTER  | ✓ Archivo guardado: C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\output\consulta_validacion.xlsx
+2025-11-20 18:31:02 | INFO     | -        | EXCEL_REPORTER  | Tamaño del archivo: 29,987 bytes
+2025-11-20 18:31:02 | INFO     | -        | EXCEL_REPORTER  | ✓ Reporte generado exitosamente: EXCEL_REPORTER
+2025-11-20 18:31:02 | INFO     | -        | MAIN            | ✓ Excel guardado en: C:\Users\GcatlasIT\PycharmProjects\PythonProject\shopify-intelisis-validator\output\consulta_validacion.xlsx
+2025-11-20 18:31:02 | INFO     | -        | EMAIL_REPORTER  | Iniciando generación de reporte: EMAIL_REPORTER
+2025-11-20 18:31:02 | INFO     | -        | EMAIL_REPORTER  | Preparando email para: analistajr@gcatlas.mx
+2025-11-20 18:31:02 | INFO     | -        | EMAIL_REPORTER  | Conectando al servidor SMTP...
+2025-11-20 18:31:06 | INFO     | -        | EMAIL_REPORTER  | Enviando email a: analistajr@gcatlas.mx
+2025-11-20 18:31:08 | INFO     | -        | EMAIL_REPORTER  | ✓ Email enviado exitosamente
+2025-11-20 18:31:08 | INFO     | -        | EMAIL_REPORTER  | ✓ Reporte generado exitosamente: EMAIL_REPORTER
+2025-11-20 18:31:08 | INFO     | -        | MAIN            | ✓ Email enviado a: analistajr@gcatlas.mx
+2025-11-20 18:31:08 | INFO     | -        | MAIN            | ======================================================================
+2025-11-20 18:31:08 | INFO     | -        | MAIN            |   RESUMEN FINAL
+2025-11-20 18:31:08 | INFO     | -        | MAIN            | ======================================================================
+2025-11-20 18:31:08 | INFO     | -        | MAIN            | 📅 Fecha(s): 2025-11-17
+2025-11-20 18:31:08 | INFO     | -        | MAIN            | 📊 Total órdenes: 220
+2025-11-20 18:31:08 | INFO     | -        | MAIN            | ✅ Validaciones OK: 188
+2025-11-20 18:31:08 | INFO     | -        | MAIN            | ⚠️  Con diferencias: 22
+2025-11-20 18:31:08 | INFO     | -        | MAIN            | ❌ No encontradas: 10
+2025-11-20 18:31:08 | INFO     | -        | MAIN            | 📈 Tasa de éxito: 85.5%
+2025-11-20 18:31:08 | INFO     | -        | MAIN            | 📅 Encontradas día siguiente: 20
+2025-11-20 18:31:08 | INFO     | -        | MAIN            | 
+2025-11-20 18:31:08 | INFO     | -        | MAIN            | Por plataforma:
+2025-11-20 18:31:08 | INFO     | -        | MAIN            |   ROOMI: 2/2 OK (0 dif, 0 no encontrados)
+2025-11-20 18:31:08 | INFO     | -        | MAIN            |   ATLAS: 186/218 OK (22 dif, 10 no encontrados)
+2025-11-20 18:31:08 | INFO     | -        | MAIN            | 
+2025-11-20 18:31:08 | INFO     | -        | MAIN            | ======================================================================
+2025-11-20 18:31:08 | INFO     | -        | MAIN            | ✅ PROCESO COMPLETADO EXITOSAMENTE
+2025-11-20 18:31:08 | INFO     | -        | MAIN            | ======================================================================
