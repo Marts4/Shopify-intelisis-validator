@@ -69,8 +69,7 @@ class ValidatorService:
 
         # Paso 4: Buscar en día siguiente si es necesario
         if check_next_day and len(dates) == 1:  # Solo en modo manual con una fecha
-            #results = self._check_next_day_for_missing(
-            results=self._check_future_days_for_missing(
+            results = self._check_next_day_for_missing(
                 results,
                 dates[0],
                 branch_ids
@@ -308,83 +307,94 @@ class ValidatorService:
 
         return differences
 
-    def _check_future_days_for_missing(
+    def _check_next_day_for_missing(
             self,
             results: List[ValidationResult],
             original_date: str,
             branch_ids: List[int]
     ) -> List[ValidationResult]:
         """
-        Busca en los siguientes 5 días las órdenes no encontradas.
+        Busca en el día siguiente las órdenes no encontradas.
         Solo aplica en modo manual con fecha única.
+
+        Args:
+            results: Resultados de validación
+            original_date: Fecha original consultada
+            branch_ids: IDs de sucursales
+
+        Returns:
+            Resultados actualizados
         """
         # Filtrar órdenes no encontradas
         not_found = [r for r in results if r.intelisis is None]
 
         if not not_found:
-            self.logger.info("No hay órdenes no encontradas para buscar en días futuros")
+            self.logger.info("No hay órdenes no encontradas para buscar en día siguiente")
             return results
 
         self.logger.subsection(
-            f"Buscando {len(not_found)} órdenes no encontradas en los siguientes 5 días"
+            f"Buscando {len(not_found)} órdenes no encontradas en día siguiente"
         )
 
-        updated_results = results.copy()
-        total_found = 0
-        current_date = original_date
+        # Obtener día siguiente
+        next_date = get_next_day(original_date)
+        self.logger.info(f"Consultando: {next_date}")
 
-        for day_offset in range(1, 6):  # Día +1 a +5
-            next_date = get_next_day(current_date)
-            current_date = next_date
+        # Obtener datos del día siguiente
+        try:
+            next_day_data = self.intelisis_client.fetch_data(next_date, branch_ids)
 
-            self.logger.info(f"Consultando día +{day_offset}: {next_date}")
+            if not next_day_data:
+                self.logger.info("No hay datos en el día siguiente")
+                return results
 
-            try:
-                future_data = self.intelisis_client.fetch_data(next_date, branch_ids)
+            # Indexar datos del día siguiente
+            next_day_index = self._index_intelisis_data(next_day_data)
 
-                if not future_data:
-                    self.logger.info(f"Sin datos en día +{day_offset}")
-                    continue
+            # Re-validar órdenes no encontradas
+            updated_results = []
+            found_count = 0
 
-                future_index = self._index_intelisis_data(future_data)
+            for result in results:
+                if result.intelisis is None:
+                    # Re-validar contra día siguiente
+                    new_result = self._validate_single_order(
+                        result.order,
+                        next_day_index
+                    )
 
-                for idx, result in enumerate(updated_results):
-                    if result.intelisis is None:
-                        new_result = self._validate_single_order(
-                            result.order,
-                            future_index
+                    if new_result.intelisis is not None:
+                        # Encontrado en día siguiente
+                        new_result.found_on_next_day = True
+                        new_result.differences.append(Difference(
+                            type=DifferenceType.FOUND_NEXT_DAY,
+                            order_value=None,
+                            intelisis_value=None
+                        ))
+                        found_count += 1
+
+                        self.logger.info(
+                            f"✓ Orden {result.order.order_id} encontrada en día siguiente",
+                            platform=result.order.platform,
+                            order_id=result.order.order_id
                         )
 
-                        if new_result.intelisis is not None:
-                            new_result.found_on_future_day = True
-                            new_result.found_future_offset = day_offset
-                            new_result.differences.append(Difference(
-                                type=DifferenceType.FOUND_NEXT_DAY,
-                                order_value=None,
-                                intelisis_value=f"Día +{day_offset}"
-                            ))
+                    updated_results.append(new_result)
+                else:
+                    updated_results.append(result)
 
-                            self.logger.info(
-                                f"✓ Orden {result.order.order_id} encontrada en día +{day_offset}",
-                                platform=result.order.platform,
-                                order_id=result.order.order_id
-                            )
+            self.logger.info(
+                f"Encontradas {found_count}/{len(not_found)} órdenes en día siguiente"
+            )
 
-                            updated_results[idx] = new_result
-                            total_found += 1
+            return updated_results
 
-            except Exception as e:
-                self.logger.error(
-                    f"Error consultando día +{day_offset}: {str(e)}",
-                    exc_info=True
-                )
-                continue
-
-        self.logger.info(
-            f"Total encontradas en días futuros: {total_found}/{len(not_found)}"
-        )
-
-        return updated_results
+        except Exception as e:
+            self.logger.error(
+                f"Error consultando día siguiente: {str(e)}",
+                exc_info=True
+            )
+            return results
 
     def _create_not_found_results(self, orders: List[Order]) -> List[ValidationResult]:
         """

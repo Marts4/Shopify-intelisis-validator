@@ -114,7 +114,7 @@ class Difference:
         """Formato legible de la diferencia"""
         if self.type == DifferenceType.FOUND_NEXT_DAY:
             return self.type.value
-        
+
         if self.order_value and self.intelisis_value:
             return f"{self.type.value} ({self.order_value} vs {self.intelisis_value})"
         return self.type.value
@@ -131,12 +131,26 @@ class ValidationResult:
     intelisis: Optional[IntelisisRecord] = None
     differences: List[Difference] = field(default_factory=list)
     found_on_next_day: bool = False
+    found_future_offset: int = 0  # Número de días después (1, 2, 3...)
 
     @property
     def status(self) -> ValidationStatus:
         """Determina el estado basado en las diferencias"""
         if self.intelisis is None:
             return ValidationStatus.NOT_FOUND
+
+        # Si fue encontrado en día futuro, es OK (aunque tenga la marca de día siguiente)
+        if self.found_on_next_day:
+            # Filtrar solo las diferencias reales (no la marca de día siguiente)
+            real_differences = [
+                d for d in self.differences
+                if d.type != DifferenceType.FOUND_NEXT_DAY
+            ]
+            if not real_differences:
+                return ValidationStatus.OK
+            return ValidationStatus.DIFFERENCES
+
+        # Validación normal
         if not self.differences:
             return ValidationStatus.OK
         return ValidationStatus.DIFFERENCES
@@ -151,8 +165,26 @@ class ValidationResult:
         """String con todas las observaciones concatenadas"""
         if self.status == ValidationStatus.NOT_FOUND:
             return "NO ENCONTRADO EN INTELISIS"
+
+        # Si fue encontrado en día futuro y no tiene diferencias reales, es OK
+        if self.found_on_next_day:
+            real_differences = [
+                d for d in self.differences
+                if d.type != DifferenceType.FOUND_NEXT_DAY
+            ]
+            if not real_differences:
+                # Agregar nota informativa de que fue encontrado en día futuro
+                day_offset = getattr(self, 'found_future_offset', 1)
+                return f"OK (Encontrado día +{day_offset})"
+            # Tiene diferencias reales además de estar en día futuro
+            diff_str = " | ".join(str(d) for d in real_differences)
+            day_offset = getattr(self, 'found_future_offset', 1)
+            return f"{diff_str} | Encontrado día +{day_offset}"
+
+        # Validación normal
         if self.is_ok:
             return "OK"
+
         return " | ".join(str(diff) for diff in self.differences)
 
     def to_dict(self) -> dict:
@@ -161,7 +193,7 @@ class ValidationResult:
         Formato compatible con el Excel original.
         """
         result = self.order.to_dict()
-        
+
         if self.intelisis:
             result.update(self.intelisis.to_dict())
         else:
@@ -172,9 +204,9 @@ class ValidationResult:
                 'total_intelisis': '',
                 'coordenadas_intelisis': ''
             })
-        
+
         result['observaciones'] = self.observations
-        
+
         return result
 
     def has_difference_type(self, diff_type: DifferenceType) -> bool:
@@ -193,24 +225,24 @@ class ValidationSummary:
     differences_count: int = 0
     not_found_count: int = 0
     found_next_day_count: int = 0
-    
+
     # Por plataforma
     platform_stats: dict = field(default_factory=dict)
 
     def add_result(self, result: ValidationResult):
         """Agrega un resultado al resumen"""
         self.total_orders += 1
-        
+
         if result.status == ValidationStatus.OK:
             self.ok_count += 1
         elif result.status == ValidationStatus.NOT_FOUND:
             self.not_found_count += 1
         else:
             self.differences_count += 1
-        
+
         if result.found_on_next_day:
             self.found_next_day_count += 1
-        
+
         # Estadísticas por plataforma
         platform = result.order.platform
         if platform not in self.platform_stats:
@@ -220,10 +252,10 @@ class ValidationSummary:
                 'differences': 0,
                 'not_found': 0
             }
-        
+
         stats = self.platform_stats[platform]
         stats['total'] += 1
-        
+
         if result.status == ValidationStatus.OK:
             stats['ok'] += 1
         elif result.status == ValidationStatus.NOT_FOUND:
@@ -260,7 +292,7 @@ class ValidationSummary:
             f"📅 Encontrados día siguiente: {self.found_next_day_count}",
             f"Tasa de éxito: {self.success_rate:.1f}%"
         ]
-        
+
         if self.platform_stats:
             lines.append("\nPor plataforma:")
             for platform, stats in self.platform_stats.items():
@@ -269,5 +301,5 @@ class ValidationSummary:
                     f"({stats['ok']} OK, {stats['differences']} dif, "
                     f"{stats['not_found']} no encontrados)"
                 )
-        
+
         return "\n".join(lines)
