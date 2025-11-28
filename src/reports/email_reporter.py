@@ -20,40 +20,40 @@ class EmailReporter(BaseReporter):
     Genera y envía reportes por correo electrónico.
     Incluye resumen ejecutivo y detalle de problemas.
     """
-    
+
     def __init__(self):
         super().__init__('EMAIL_REPORTER')
         self.config = settings.email_report
-        
+
         if not self.config.enabled:
             self.logger.info("Email reporter deshabilitado en configuración")
-        
+
         # Validar configuración
         if self.config.enabled:
             self._validate_config()
-    
+
     def _validate_config(self):
         """Valida que la configuración de email sea correcta"""
         if not self.config.sender:
             raise EmailSendError("Email sender no configurado")
-        
+
         if not self.config.password:
             raise EmailSendError("Email password no configurado")
-        
+
         if not self.config.recipients:
             raise EmailSendError("No hay destinatarios configurados")
-        
+
         self.logger.debug("Configuración de email validada")
-    
+
     def _create_report(
-        self, 
-        results: List[ValidationResult], 
-        summary: ValidationSummary,
-        date_description: str
+            self,
+            results: List[ValidationResult],
+            summary: ValidationSummary,
+            date_description: str
     ):
         """
         Genera y envía el email con el reporte.
-        
+
         Args:
             results: Lista de resultados
             summary: Resumen estadístico
@@ -62,29 +62,29 @@ class EmailReporter(BaseReporter):
         if not self.config.enabled:
             self.logger.info("Envío de email omitido (deshabilitado)")
             return
-        
+
         self.logger.info(f"Preparando email para: {', '.join(self.config.recipients)}")
-        
+
         # Crear mensaje
         msg = self._create_message(results, summary, date_description)
-        
+
         # Enviar
         self._send_email(msg)
-    
+
     def _create_message(
-        self, 
-        results: List[ValidationResult], 
-        summary: ValidationSummary,
-        date_description: str
+            self,
+            results: List[ValidationResult],
+            summary: ValidationSummary,
+            date_description: str
     ) -> MIMEMultipart:
         """
         Crea el mensaje de email con formato HTML.
-        
+
         Args:
             results: Lista de resultados
             summary: Resumen estadístico
             date_description: Descripción de fechas
-            
+
         Returns:
             Mensaje MIME completo
         """
@@ -92,23 +92,23 @@ class EmailReporter(BaseReporter):
         msg['From'] = self.config.sender
         msg['To'] = ', '.join(self.config.recipients)
         msg['Subject'] = self._create_subject(summary, date_description)
-        
+
         # Generar HTML
         html_body = self._generate_html(results, summary, date_description)
-        
+
         # Adjuntar HTML
         msg.attach(MIMEText(html_body, 'html', 'utf-8'))
-        
+
         return msg
-    
+
     def _create_subject(self, summary: ValidationSummary, date_description: str) -> str:
         """
         Crea el asunto del email.
-        
+
         Args:
             summary: Resumen estadístico
             date_description: Descripción de fechas
-            
+
         Returns:
             String con el asunto
         """
@@ -116,30 +116,30 @@ class EmailReporter(BaseReporter):
             f"📊 Validación Shopify-Intelisis | {date_description} | "
             f"{summary.total_orders} órdenes"
         )
-    
+
     def _generate_html(
-        self, 
-        results: List[ValidationResult], 
-        summary: ValidationSummary,
-        date_description: str
+            self,
+            results: List[ValidationResult],
+            summary: ValidationSummary,
+            date_description: str
     ) -> str:
         """
         Genera el HTML del reporte.
-        
+
         Args:
             results: Lista de resultados
             summary: Resumen estadístico
             date_description: Descripción de fechas
-            
+
         Returns:
             String con HTML completo
         """
         # Calcular estadísticas por plataforma
         platform_stats = self._calculate_platform_stats(summary)
-        
+
         # Filtrar registros con problemas
         problematic_results = [r for r in results if not r.is_ok]
-        
+
         html = f"""
 <!DOCTYPE html>
 <html>
@@ -343,16 +343,16 @@ class EmailReporter(BaseReporter):
                     </thead>
                     <tbody>
 """
-            
+
             for result in problematic_results:
                 order = result.order
                 shopify_url = self._get_shopify_url(order)
-                
+
                 total_intelisis = (
-                    f"${result.intelisis.total:.2f}" 
+                    f"${result.intelisis.total:.2f}"
                     if result.intelisis else "N/A"
                 )
-                
+
                 html += f"""
                         <tr>
                             <td>{order.platform}</td>
@@ -363,7 +363,7 @@ class EmailReporter(BaseReporter):
                             <td>{result.observations}</td>
                         </tr>
 """
-            
+
             html += """
                     </tbody>
                 </table>
@@ -387,43 +387,43 @@ class EmailReporter(BaseReporter):
 </body>
 </html>
 """
-        
+
         return html
-    
+
     def _calculate_platform_stats(self, summary: ValidationSummary) -> dict:
         """
         Calcula estadísticas HTML por plataforma.
-        
+
         Args:
             summary: Resumen estadístico
-            
+
         Returns:
             Diccionario con HTML de estadísticas
         """
         platforms = sorted(summary.platform_stats.keys())
-        
+
         headers = ''.join([f'<th>🛒 {p}</th>' for p in platforms])
-        
+
         totals = ''.join([
             f'<td class="metric-value value-info">{summary.platform_stats[p]["total"]}</td>'
             for p in platforms
         ])
-        
+
         ok = ''.join([
             f'<td class="metric-value value-ok">{summary.platform_stats[p]["ok"]}</td>'
             for p in platforms
         ])
-        
+
         differences = ''.join([
             f'<td class="metric-value value-warning">{summary.platform_stats[p]["differences"]}</td>'
             for p in platforms
         ])
-        
+
         not_found = ''.join([
             f'<td class="metric-value value-danger">{summary.platform_stats[p]["not_found"]}</td>'
             for p in platforms
         ])
-        
+
         return {
             'headers': headers,
             'totals': totals,
@@ -431,27 +431,24 @@ class EmailReporter(BaseReporter):
             'differences': differences,
             'not_found': not_found
         }
-    
+
     def _get_shopify_url(self, order) -> str:
         """
         Genera la URL de administración de Shopify para una orden.
-        
+
         Args:
             order: Objeto Order
-            
+
         Returns:
             URL de Shopify admin
         """
         platform_config = settings.get_platform_by_name(order.platform)
-        
+
         if not platform_config:
             return "#"
-        
-        # Extraer el nombre de la tienda del shop
-        #shop_name = platform_config.shop.split('.')[0]
-        shop_name = platform_config.shopify_admin_name
-        
-        return f"https://admin.shopify.com/store/{shop_name}/orders/{order.order_id}"
+
+        # Usar la nueva propiedad shopify_admin_name
+        return f"https://admin.shopify.com/store/{platform_config.shopify_admin_name}/orders/{order.order_id}"
 
     def _send_email(self, msg: MIMEMultipart):
         """
@@ -478,6 +475,7 @@ class EmailReporter(BaseReporter):
                 try:
                     server.starttls()
                 except smtplib.SMTPNotSupportedError:
+                    # Algunos servidores no requieren STARTTLS
                     self.logger.warning("STARTTLS no soportado, continuando sin TLS")
 
             # Autenticar

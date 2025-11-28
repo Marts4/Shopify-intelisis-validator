@@ -10,9 +10,9 @@ from typing import Dict, List, Any, Optional
 from dataclasses import dataclass
 from dotenv import load_dotenv
 
-
-# Cargar variables de entorno
-load_dotenv()
+# Cargar variables de entorno desde .env como fallback
+# Las variables del sistema tienen prioridad
+load_dotenv(override=False)
 
 # Rutas base del proyecto
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -30,7 +30,6 @@ class PlatformConfig:
     branch_id: int
     api_version: str
     token: str
-    admin_shop_name: str = None  # Nombre personalizado para URLs de admin
 
     @property
     def token_env_key(self) -> str:
@@ -39,11 +38,14 @@ class PlatformConfig:
 
     @property
     def shopify_admin_name(self) -> str:
-        """Nombre para usar en URLs de Shopify admin"""
-        if self.admin_shop_name:
-            return self.admin_shop_name
-        # Extraer automáticamente del shop (ej: "roomi-mexico.myshopify.com" -> "roomi-mexico")
-        return self.shop.split('.')[0]
+        """
+        Devuelve el nombre que Shopify usa en la URL admin.
+        Ejemplo:
+        shop = "roomi-mexico.myshopify.com"
+        → "roomi-mexico"
+        """
+        return self.shop.replace(".myshopify.com", "")
+
 
 @dataclass
 class IntelisisConfig:
@@ -133,7 +135,7 @@ class Settings:
     def _load_config(self):
         """Carga configuración desde JSON y variables de entorno"""
         config_path = CONFIG_DIR / "platforms.json"
-        
+
         if not config_path.exists():
             raise FileNotFoundError(
                 f"Archivo de configuración no encontrado: {config_path}"
@@ -146,37 +148,51 @@ class Settings:
         self.platforms: List[PlatformConfig] = []
         for platform_data in config_data.get("platforms", []):
             token_key = f"SHOPIFY_TOKEN_{platform_data['name'].upper()}"
+
+            # Buscar token: primero con nombre estándar, luego con nombre del sistema
             token = os.getenv(token_key)
-            
+
+            # Fallback a nombres alternativos del sistema
+            if not token:
+                alt_names = {
+                    'SHOPIFY_TOKEN_ROOMI': 'token-roomi-mexico.myshopify.com',
+                    'SHOPIFY_TOKEN_SPRING': 'token-spring-air-mx.myshopify.com',
+                    'SHOPIFY_TOKEN_ATLAS': 'token-colchones-atlas.myshopify.com'
+                }
+                token = os.getenv(alt_names.get(token_key, ''))
+
             if not token and platform_data.get("enabled", True):
                 raise ValueError(
                     f"Token no encontrado para {platform_data['name']}. "
                     f"Variable de entorno requerida: {token_key}"
                 )
-            
+
             self.platforms.append(PlatformConfig(
                 name=platform_data["name"],
                 enabled=platform_data.get("enabled", True),
                 shop=platform_data["shop"],
                 branch_id=platform_data["branch_id"],
                 api_version=platform_data["api_version"],
-                token=token or "",
-                admin_shop_name=platform_data.get("admin_shop_name")
+                token=token or ""
             ))
 
         # Intelisis
         intelisis_data = config_data.get("intelisis", {})
+
+        # Buscar token de Intelisis con nombre alternativo
+        intelisis_token = os.getenv("INTELISIS_AUTH_TOKEN") or os.getenv("token-AtlasBI")
+
         self.intelisis = IntelisisConfig(
             base_url=intelisis_data["base_url"],
             page_limit=intelisis_data.get("page_limit", 10000),
             valid_movements=intelisis_data.get("valid_movements", ["Pedido"]),
             filter_positive_totals=intelisis_data.get("filter_positive_totals", True),
-            auth_token=os.getenv("INTELISIS_AUTH_TOKEN", ""),
+            auth_token=intelisis_token or "",
             cookie=os.getenv("INTELISIS_COOKIE", "")
         )
 
         if not self.intelisis.auth_token:
-            raise ValueError("INTELISIS_AUTH_TOKEN no configurado en .env")
+            raise ValueError("INTELISIS_AUTH_TOKEN o token-AtlasBI no configurado")
 
         # Validación
         validation_data = config_data.get("validation", {})
@@ -196,7 +212,7 @@ class Settings:
 
         # Reportes
         reports_data = config_data.get("reports", {})
-        
+
         excel_data = reports_data.get("excel", {})
         self.excel_report = ExcelReportConfig(
             enabled=excel_data.get("enabled", True),
@@ -204,17 +220,21 @@ class Settings:
         )
 
         email_data = reports_data.get("email", {})
+
+        # Buscar password de email con nombre alternativo
+        email_pass = os.getenv("EMAIL_PASSWORD") or os.getenv("SMTP_PASS_validator_shopify")
+
         self.email_report = EmailReportConfig(
             enabled=email_data.get("enabled", True),
             smtp_server=email_data.get("smtp_server", "smtp.gmail.com"),
             smtp_port=email_data.get("smtp_port", 587),
             sender=email_data.get("sender", ""),
             recipients=email_data.get("recipients", []),
-            password=os.getenv("EMAIL_PASSWORD", "")
+            password=email_pass or ""
         )
 
         if self.email_report.enabled and not self.email_report.password:
-            raise ValueError("EMAIL_PASSWORD no configurado en .env")
+            raise ValueError("EMAIL_PASSWORD o SMTP_PASS_validator_shopify no configurado")
 
         # Logging
         logging_data = config_data.get("logging", {})
