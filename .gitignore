@@ -5,22 +5,22 @@ __pycache__/
 *.pyd
 *.pkl
 
-# Virtual envs
+# Virtual envs (elige solo si realmente usas uno de estos nombres)
 .env/
 venv/
 ENV/
 env/
 
-# Byte-compiled / optimized / DLL files
+# Ignore environment variable file
+.env
+
+# ---- BYTECODE / BINARY ----
 *.so
 *.dll
 *.dylib
 
 # ---- IDE / EDITOR ----
-# PyCharm
 .idea/
-
-# VSCode
 .vscode/
 
 # ---- SYSTEM / TEMP FILES ----
@@ -36,13 +36,9 @@ Thumbs.db
 ~$*.xls
 ~$*.xlsm
 
-# ---- OUTPUT ----
-output/*.xlsx
-output/*.csv
-output/*.log
+# ---- OUTPUT (ignore everything) ----
+output/
 
 # ---- OTHER ----
 *.bak
 *.swp
-.env
-
